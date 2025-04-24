@@ -37,7 +37,7 @@ const HeroSection = () => {
                 </div>
             </div>
 
-            <div className="my-16 px-4 md:px-20">
+            <div className="my-16 px-2 sm:px-4">
                 <WhyUs />
             </div>
 

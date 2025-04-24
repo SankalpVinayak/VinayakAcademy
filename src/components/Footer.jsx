@@ -4,7 +4,7 @@ import Logo from "../assets/VALogo2.svg";
 const Footer = () => {
   return (
     <div className="px-4 sm:px-6 md:px-10 lg:px-20">
-      <footer className="bg-[#c7b0d6] rounded-[50px] text-black py-10 px-6 md:px-10 lg:px-16 mb-8">
+      <footer className="bg-linear-to-r from-[#CE93D8] to-[#9C27B0] rounded-[50px] text-black py-10 px-6 md:px-10 lg:px-16 mb-8">
         <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 items-start">
           {/* Logo */}
           <div>

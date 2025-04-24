@@ -36,16 +36,16 @@ const WhyUs = () => {
             }
         ]
     return (
-        <div className="relative flex justify-center items-center py-16 px-4 sm:px-8 md:px-12 my-16 overflow-hidden">
+        <div className="relative flex flex-col xl:flex-row justify-center items-center py-16 px-4 sm:px-6 md:px-10 my-16 overflow-hidden">
 
-            {/* Background Img */}
-            <div className="absolute bg-purple-200 rounded-full w-[1100px] h-[520px] z-0" />
+            {/* Purple Background - Only visible on xl and above */}
+            <div className="hidden xl:block absolute bg-purple-200 rounded-full w-[1100px] h-[520px] z-0" />
 
-            {/* Flex container for grey circle */}
-            <div className="relative z-10 flex items-center w-[95%] max-w-[1100px] gap-10 px-6 md:px-8">
+            {/* Main Content Container */}
+            <div className="relative z-10 w-full max-w-[1100px] bg-purple-100 xl:bg-transparent rounded-[50px] px-6 sm:px-8 md:px-10 py-10 flex flex-col xl:flex-row items-center gap-10">
 
-                {/* Left Purple Circle - half outside */}
-                <div className="flex-shrink-0 -ml-20 md:-ml-28 z-10">
+                {/* Why Choose Us Circle - Centered on small, left on xl */}
+                <div className="flex-shrink-0 -mt-10 xl:mt-0 xl:-ml-20 md:-ml-28 z-10">
                     <div className="w-40 h-40 md:w-44 md:h-44 rounded-full bg-gradient-to-b from-purple-400 to-purple-700 shadow-lg flex items-center justify-center text-white text-center font-bold">
                         <div>
                             <div className="text-sm">WHY</div>
@@ -55,8 +55,8 @@ const WhyUs = () => {
                     </div>
                 </div>
 
-                {/* Right Sec */}
-                <div className="grid gap-5 max-w-[800px]">
+                {/* Right Features Section */}
+                <div className="grid gap-5 max-w-[800px] w-full">
                     {features.map((item, i) => (
                         <div key={i} className="flex items-start gap-4">
                             <div className={`w-10 h-10 flex items-center justify-center rounded-full ${item.bg} shadow-md`}>
@@ -71,6 +71,7 @@ const WhyUs = () => {
                 </div>
             </div>
         </div>
+
     );
 }
 
