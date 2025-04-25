@@ -1,39 +1,51 @@
 import { React, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react';
 import VinayakLogo2 from '../assets/VALogo2.svg'
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const location = useLocation();
+
 
     const navItems = [
         { label: 'Home', path: '/' },
-        { label: 'Courses', path: '/courses' },
+        { label: 'Courses', path: '/courseDetails' },
         { label: 'Collaboration', path: '/' },
         { label: 'Portfolio', path: '/' },
         { label: 'About Us', path: '/' },
     ];
 
     return (
-        <nav className="bg-white">
+        <nav className="bg-purple-200">
             <div className="max-w-[1200px] mx-auto flex justify-between items-center px-6 py-4">
                 {/* Logo */}
-                <img src={VinayakLogo2} alt="Logo" className="h-12" />
+                <img src={VinayakLogo2} alt="Logo" className="h-15" />
 
                 {/* Desktop Nav */}
-                <ul className="hidden md:flex gap-8 text-sm font-semibold text-purple-500">
-                    {navItems.map((item) => (
-                        <li key={item.path}>
-                            <Link to={item.path} className="hover:text-purple-700 transition duration-200">
-                                {item.label}
-                            </Link>
-                        </li>
-                    ))}
+                <ul className="hidden md:flex gap-8 text-sm font-semibold">
+                    {navItems.map((item) => {
+                        const isActive = location.pathname === item.path;
+                        return (
+                            <li key={item.path}>
+                                <Link
+                                    to={item.path}
+                                    className={`transition duration-200 transform hover:scale-105 
+                    ${isActive
+                                            ? 'text-purple-900 font-bold border-b-2 border-purple-900 pb-1'
+                                            : 'text-purple-500 hover:text-purple-700'
+                                        }`}
+                                >
+                                    {item.label}
+                                </Link>
+                            </li>
+                        );
+                    })}
                 </ul>
 
                 {/* Login button (desktop) */}
                 <div className="hidden md:block">
-                    <button className="bg-purple-800 text-white px-6 py-2 rounded-full shadow-md hover:bg-purple-700 transition">
+                    <button className="bg-purple-800 text-white px-6 py-2 rounded-full shadow-md hover:bg-purple-700 transition cursor-pointer">
                         Log In
                     </button>
                 </div>
