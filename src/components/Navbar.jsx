@@ -14,6 +14,7 @@ const Navbar = () => {
         { label: 'Collaboration', path: '/' },
         { label: 'Portfolio', path: '/' },
         { label: 'About Us', path: '/' },
+        { label: 'Contact Us', path: '/contactUs' },
     ];
 
     return (

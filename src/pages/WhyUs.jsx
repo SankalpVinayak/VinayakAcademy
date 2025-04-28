@@ -45,7 +45,7 @@ const WhyUs = () => {
             <div className="relative z-10 w-full max-w-[1100px] bg-purple-100 xl:bg-transparent rounded-[50px] px-6 sm:px-8 md:px-10 py-10 flex flex-col xl:flex-row items-center gap-10">
 
                 {/* Why Choose Us Circle - Centered on small, left on xl */}
-                <div className="flex-shrink-0 -mt-10 xl:mt-0 xl:-ml-20 md:-ml-28 z-10">
+                <div className="flex-shrink-0 xl:mt-0 xl:ml-2 z-10">
                     <div className="w-40 h-40 md:w-44 md:h-44 rounded-full bg-gradient-to-b from-purple-400 to-purple-700 shadow-lg flex items-center justify-center text-white text-center font-bold">
                         <div>
                             <div className="text-sm">WHY</div>

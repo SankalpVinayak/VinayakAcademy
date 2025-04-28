@@ -38,12 +38,18 @@ const courses = [
 
 const Courses = () => {
     return (
-        <section className="px-6 py-8 pb-16 bg-white text-[#B71D8D]">
-            <h2 className="text-4xl font-bold text-center mb-4 italic">Popular Courses</h2>
-            <p className="text-center mb-12 italic text-lg">
+        <section className="px-4 sm:px-6 lg:px-8 py-8 pb-16 max-w-[1200px] mx-auto bg-white text-[#B71D8D]">
+
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 italic transition-all duration-300">
+                Popular Courses
+            </h2>
+
+            <p className="text-base sm:text-lg text-center mb-10 sm:mb-12 italic text-gray-600 transition-all duration-300 max-w-2xl mx-auto">
                 Explore Our Most Popular Courses, Choose the Right Program to Elevate Your Career
             </p>
+
             <CourseSlider courses={courses} />
+
         </section>
     );
 };

@@ -8,7 +8,7 @@ const HeroSection = () => {
     const [activeTab, setActiveTab] = useState("impact");
 
     return (
-        <div className="">
+        <div className="overflow-hidden">
             {/* Hero Sec. */}
             <div className="grid md:grid-cols-2 items-center px-8 md:px-20 pt-16">
 

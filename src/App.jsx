@@ -3,6 +3,8 @@ import Home from './pages/Home'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import CourseDetails from './pages/CourseDetails'
+import { Contact } from 'lucide-react'
+import ContactUs from './pages/ContactUs'
 
 function App() {
 
@@ -13,6 +15,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/courseDetails' element={<CourseDetails />} />
+          <Route path='/contactUs' element={<ContactUs />} />
         </Routes>
         <Footer />
       </Router>

@@ -11,7 +11,7 @@ const CourseSlider = ({ courses }) => {
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 2500,
+        autoplaySpeed: 2000,
         responsive: [
             {
                 breakpoint: 1024,
