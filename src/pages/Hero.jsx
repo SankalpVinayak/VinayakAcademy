@@ -10,7 +10,7 @@ const HeroSection = () => {
     return (
         <div className="overflow-hidden">
             {/* Hero Sec. */}
-            <div className="grid md:grid-cols-2 items-center px-8 md:px-20 pt-16">
+            <div className="grid md:grid-cols-2 gap-y-8 items-center px-8 md:px-20 pt-16 md:gap-x-12">
 
                 {/* Left Img */}
                 <div className="order-2 md:order-1">
@@ -18,7 +18,7 @@ const HeroSection = () => {
                 </div>
 
                 {/* Right Txt */}
-                <div className="text-center md:text-left order-1 md:order-2">
+                <div className="text-center md:text-left gap-3 order-1 md:order-2">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
                         Unlock Your Potential with <span className="italic">Online Learning</span>
                     </h1>
