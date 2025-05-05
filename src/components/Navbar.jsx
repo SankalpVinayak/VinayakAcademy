@@ -12,9 +12,7 @@ const Navbar = () => {
         { label: 'Home', path: '/' },
         { label: 'Courses', path: '/courseDetails' },
         { label: 'Collaboration', path: '/' },
-        { label: 'Portfolio', path: '/' },
         { label: 'About Us', path: '/aboutUs' },
-        { label: 'Contact Us', path: '/contactUs' },
     ];
 
     return (
@@ -45,11 +43,13 @@ const Navbar = () => {
                 </ul>
 
                 {/* Login button (desktop) */}
-                <div className="hidden md:block">
-                    <button className="bg-purple-800 text-white px-6 py-2 rounded-full shadow-md hover:bg-purple-700 transition cursor-pointer">
-                        Log In
-                    </button>
-                </div>
+                <Link to="/contactUs">
+                    <div className="hidden md:block">
+                        <button className="bg-purple-800 text-white px-6 py-2 rounded-full shadow-md hover:bg-purple-700 transition cursor-pointer">
+                            Conatct Us
+                        </button>
+                    </div>
+                </Link>
 
                 {/* Hamburger Button */}
                 <button
