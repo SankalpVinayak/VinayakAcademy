@@ -13,10 +13,11 @@ const Navbar = () => {
         { label: 'Courses', path: '/courseDetails' },
         { label: 'Collaboration', path: '/' },
         { label: 'About Us', path: '/aboutUs' },
+        { label: 'Enroll', path: '/' },
     ];
 
     return (
-        <nav className="bg-purple-200">
+        <nav className="bg-purple-200 sticky top-0 z-50">
             <div className="max-w-[1200px] mx-auto flex justify-between items-center px-6 py-4">
                 {/* Logo */}
                 <img src={VinayakLogo2} alt="Logo" className="h-15" />

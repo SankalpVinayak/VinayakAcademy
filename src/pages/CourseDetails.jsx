@@ -95,7 +95,7 @@ const CourseSection = ({ title, data }) => (
         </motion.h2>
         <div className="flex flex-wrap justify-center gap-6 items-start">
             {data.map((item, index) => (
-                <CourseCard key={index} title={item.title} fee={item.fee} desc={item.desc} />
+                <CourseCard key={index} title={item.title} fee={item.fee} desc={item.desc} />           
             ))}
         </div>
     </motion.section>

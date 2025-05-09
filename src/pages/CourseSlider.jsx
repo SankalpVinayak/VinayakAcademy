@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import { Link } from "react-router-dom"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -37,9 +38,12 @@ const CourseSlider = ({ courses }) => {
                         <div className="p-4">
                             <h3 className="text-lg font-semibold italic mb-2">{course.title}</h3>
                             <p className="text-sm mb-4">{course.description}</p>
-                            <button className="bg-[#FAFFD8] text-[#3C004D] px-4 py-2 rounded-full font-semibold italic">
-                                Learn More
-                            </button>
+                            <Link to='/courseDetails'>
+                                <button className="bg-[#FAFFD8] text-[#3C004D] px-4 py-2 
+                                rounded-full font-semibold italic cursor-pointer">
+                                    Learn More
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

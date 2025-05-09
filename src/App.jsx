@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import CourseDetails from './pages/CourseDetails'
 import ContactUs from './pages/ContactUs'
 import About from './pages/About'
+import Achievements from './pages/Achievements'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
           <Route path='/courseDetails' element={<CourseDetails />} />
           <Route path='/contactUs' element={<ContactUs />} />
           <Route path='/aboutUs' element={<About />} />
+          <Route path='/achievements' element={<Achievements />} />
         </Routes>
         <Footer />
       </Router>
