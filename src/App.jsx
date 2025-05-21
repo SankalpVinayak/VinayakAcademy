@@ -6,6 +6,10 @@ import CourseDetails from './pages/CourseDetails'
 import ContactUs from './pages/ContactUs'
 import About from './pages/About'
 import Achievements from './pages/Achievements'
+import Enroll from './pages/Enroll'
+import Counselling from './pages/Counselling'
+import Collaboration from './pages/Collaboration'
+import CollegeList from './pages/CollegeList'
 
 function App() {
 
@@ -19,6 +23,10 @@ function App() {
           <Route path='/contactUs' element={<ContactUs />} />
           <Route path='/aboutUs' element={<About />} />
           <Route path='/achievements' element={<Achievements />} />
+          <Route path='/enroll' element={<Enroll />} />
+          <Route path='/counselling' element={<Counselling />} />
+          <Route path='/collaboration' element={<Collaboration />} />
+          <Route path="/colleges/:courseName" element={<CollegeList />} />
         </Routes>
         <Footer />
       </Router>

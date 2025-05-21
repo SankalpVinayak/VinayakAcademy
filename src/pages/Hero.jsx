@@ -3,6 +3,8 @@ import HeroImg from '../assets/amico.svg'
 import Courses from "./Courses";
 import Impact from "./Impact";
 import WhyUs from "./WhyUs";
+import Values from "./Values";
+import SuccessStories from "./SuccessStories";
 
 const HeroSection = () => {
     const [activeTab, setActiveTab] = useState("impact");
@@ -69,6 +71,9 @@ const HeroSection = () => {
             ) : (
                 <Courses />
             )}
+
+            <Values />
+            <SuccessStories />
         </div>
     );
 };

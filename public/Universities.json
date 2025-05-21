@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Vinayak University",
+        "courses": [
+            "B.A.",
+            "B.Com.",
+            "M.A."
+        ],
+        "image": "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29sbGVnZSUyMGNhbXB1c3xlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+        "name": "Global Tech Institute",
+        "courses": [
+            "B.C.A.",
+            "M.C.A.",
+            "PGDCA"
+        ],
+        "image": "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29sbGVnZSUyMGNhbXB1c3xlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+        "name": "Liberty Arts College",
+        "courses": [
+            "B.Lib.",
+            "M.Lib.",
+            "B.A."
+        ],
+        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+    }
+]

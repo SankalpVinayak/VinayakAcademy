@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaChalkboardTeacher, FaUsers, FaLaptopCode, FaGlobeAmericas } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Impact = () => {
     const stats = [
@@ -63,23 +64,23 @@ const Impact = () => {
                     {stats.map((item, index) => (
                         <div
                             key={index}
-                            className="bg-purple-500 border-gray-200 rounded-2xl shadow-md px-2 py-6 flex flex-col items-center hover:shadow-lg transition-shadow"
+                            className="bg-purple-300 border-gray-200 rounded-2xl shadow-md px-2 py-6 flex flex-col items-center hover:shadow-lg transition-shadow"
                         >
                             <div className="text-4xl mb-4">{item.icon}</div>
-                            <h3 className="text-xl font-bold text-[#FAFFD8]">{item.value}</h3>
-                            <p className="text-sm text-white mt-1">{item.label}</p>
+                            <h3 className="text-xl font-bold text-purple-800">{item.value}</h3>
+                            <p className="text-purple-800 font-semibold mt-1">{item.label}</p>
                         </div>
                     ))}
                 </div>
             </div>
 
-            <div className="bg-blue-100 py-10 px-4 md:px-20 grid grid-cols-1 md:grid-cols-4 gap-8 text-center mt-16">
+            <div className="bg-purple-200 py-10 px-4 md:px-20 grid grid-cols-1 md:grid-cols-4 gap-8 text-center mt-16">
                 {features.map((item, index) => (
                     <div key={index} className="flex flex-col items-center">
-                        <div className="bg-white rounded-full shadow-lg p-4 mb-4">
+                        <div className="bg-white rounded-full shadow-lg p-4 mb-4 hover:shadow-2xl">
                             {item.icon}
                         </div>
-                        <h3 className="text-md font-bold text-gray-800">{item.title}</h3>
+                        <h3 className="text-md font-bold text-purple-800">{item.title}</h3>
                         <p className="text-sm text-gray-600 mt-2">{item.description}</p>
                     </div>
                 ))}
@@ -108,6 +109,14 @@ const Impact = () => {
                         We offer learners worldwide flexible, interactive, and transformative online learning experiences, bridging the gap between ambition and achievement.
                     </p>
                 </div>
+            </div>
+            <div className="flex justify-center items-center relative -top-5 mb-10">
+                <Link to='/aboutUs'>
+                    <button className="bg-purple-600 hover:bg-purple-800 text-white font-semibold py-3 
+                px-6 rounded-full shadow-md transition cursor-pointer duration-300">
+                        Know More About Us
+                    </button>
+                </Link>
             </div>
         </div>
     )

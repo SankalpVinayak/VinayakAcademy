@@ -1,78 +1,86 @@
-import React from 'react'
-import { FaArrowsAltH, FaIndustry, FaGlobe, FaUserCheck, FaLightbulb } from "react-icons/fa";
+import { CheckCircle } from "lucide-react";
+import { motion } from "framer-motion";
+
+const features = [
+    {
+        title: "Expert Career Mentors",
+        desc: "Our counselors are industry veterans with a passion for guiding students to success.",
+        icon: "🎓",
+    },
+    {
+        title: "Personalized Guidance",
+        desc: "Every student receives tailored advice based on aptitude, goals, and personality.",
+        icon: "🧭",
+    },
+    {
+        title: "Proven Track Record",
+        desc: "Hundreds of students have reached top universities and careers through our programs.",
+        icon: "📈",
+    },
+    {
+        title: "Holistic Development",
+        desc: "From soft skills to exam prep, we help students grow in every direction.",
+        icon: "🌱",
+    },
+];
 
 const WhyUs = () => {
-    const features =
-        [
-            {
-                icon: <FaArrowsAltH size={20} className="text-white" />,
-                title: "Flexibility Redefined",
-                description: "Our unwavering commitment to flexibility ensures education aligns seamlessly with your work and personal commitments.",
-                bg: "bg-purple-500"
-            },
-            {
-                icon: <FaIndustry size={20} className="text-white" />,
-                title: "Industry Excellence",
-                description: "Stay ahead in your career with meticulously crafted courses designed to meet the dynamic demands of various industries.",
-                bg: "bg-indigo-500"
-            },
-            {
-                icon: <FaGlobe size={20} className="text-white" />,
-                title: "Premier Collaborations, Global Recognition",
-                description: "Access high-quality, globally recognized education through our exclusive partnerships with renowned universities.",
-                bg: "bg-cyan-500"
-            },
-            {
-                icon: <FaUserCheck size={20} className="text-white" />,
-                title: "Personalized Success",
-                description: "Your success is our heartbeat. Dive into testimonials and stories showcasing careers transformed by Vinayak Academy.",
-                bg: "bg-pink-500"
-            },
-            {
-                icon: <FaLightbulb size={20} className="text-white" />,
-                title: "Innovative Integration",
-                description: "Experience education uniquely integrated into your professional life, combining theoretical knowledge with practical application.",
-                bg: "bg-gray-600"
-            }
-        ]
     return (
-        <div className="relative flex flex-col xl:flex-row justify-center items-center py-16 px-4 sm:px-6 md:px-10 my-16 overflow-hidden">
-
-            {/* Purple Background - Only visible on xl and above */}
-            <div className="hidden xl:block absolute bg-purple-200 rounded-full w-[1100px] h-[520px] z-0" />
-
-            {/* Main Content Container */}
-            <div className="relative z-10 w-full max-w-[1100px] bg-purple-100 xl:bg-transparent rounded-[50px] px-6 sm:px-8 md:px-10 py-10 flex flex-col xl:flex-row items-center gap-10">
-
-                {/* Why Choose Us Circle - Centered on small, left on xl */}
-                <div className="flex-shrink-0 xl:mt-0 xl:ml-2 z-10">
-                    <div className="w-40 h-40 md:w-44 md:h-44 rounded-full bg-gradient-to-b from-purple-400 to-purple-700 shadow-lg flex items-center justify-center text-white text-center font-bold">
-                        <div>
-                            <div className="text-sm">WHY</div>
-                            <div className="text-xl">CHOOSE</div>
-                            <div className="text-sm">US</div>
-                        </div>
+        <section className="bg-white py-24 px-6 md:px-20 -mt-20">
+            <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+                {/* Left Section */}
+                <motion.div
+                    initial={{ opacity: 0, x: -60 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="-mt-6"
+                >
+                    <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
+                        Why Vinayak Academy?
+                    </h2>
+                    <p className="text-lg text-gray-600 mb-8">
+                        We are more than counselors — we are partners in your journey to
+                        academic and career excellence.
+                    </p>
+                    <div className="space-y-4">
+                        {[
+                            "One-on-One Career Mapping",
+                            "Support for All Streams & Grades",
+                            "Results-Oriented Planning",
+                            "Support Beyond Counseling",
+                        ].map((item, i) => (
+                            <div key={i} className="flex items-center gap-3">
+                                <CheckCircle className="text-green-500" size={20} />
+                                <span className="text-gray-700">{item}</span>
+                            </div>
+                        ))}
                     </div>
-                </div>
+                </motion.div>
 
-                {/* Right Features Section */}
-                <div className="grid gap-5 max-w-[800px] w-full">
-                    {features.map((item, i) => (
-                        <div key={i} className="flex items-start gap-4">
-                            <div className={`w-10 h-10 flex items-center justify-center rounded-full ${item.bg} shadow-md`}>
-                                {item.icon}
-                            </div>
-                            <div>
-                                <h4 className="font-semibold text-base">{item.title}</h4>
-                                <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
-                            </div>
+                {/* Right Section: Feature Cards */}
+                <motion.div
+                    className="grid sm:grid-cols-2 gap-6"
+                    initial={{ opacity: 0, x: 60 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                >
+                    {features.map((item, index) => (
+                        <div
+                            key={index}
+                            className="bg-purple-200 backdrop-blur-lg rounded-2xl p-6 shadow-lg border 
+                            border-purple-100 hover:shadow-xl transition"
+                        >
+                            <div className="text-4xl mb-3">{item.icon}</div>
+                            <h4 className="text-xl font-semibold text-purple-800 mb-2">
+                                {item.title}
+                            </h4>
+                            <p className="text-gray-600 text-sm">{item.desc}</p>
                         </div>
                     ))}
-                </div>
+                </motion.div>
             </div>
-        </div>
-
+        </section>
     );
-}
+};
 
-export default WhyUs
+export default WhyUs;

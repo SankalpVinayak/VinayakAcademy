@@ -1,35 +1,170 @@
 import React, { useState } from 'react';
 import { FaGraduationCap } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
+import { summary } from 'framer-motion/client';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const courses = {
     schooling: [
-        { title: 'Secondary', fee: '40000', desc: 'The Secondary program focuses on foundational academic subjects, encouraging critical thinking and a deep understanding of core concepts. This course is designed to strengthen the base for future academic pursuits. Students are engaged through practical applications and interactive lessons. A supportive environment ensures every learner thrives.' },
-        { title: 'Higher Secondary', fee: '50000', desc: 'Our Higher Secondary curriculum is tailored to prepare students for university and competitive exams. It builds upon core knowledge while introducing specialized subjects. Emphasis is placed on analytical skills and conceptual clarity. The program fosters independent learning and confidence.' },
+        {
+            title: 'Secondary',
+            fee: '₹40,000',
+            duration: '2 Years',
+            summary: 'Build strong foundational skills in core academic subjects.',
+            careerPath: 'Preparation for Higher Secondary & Competitive Exams',
+            desc: 'The Secondary program focuses on foundational academic subjects, encouraging critical thinking and a deep understanding of core concepts. This course is designed to strengthen the base for future academic pursuits. Students are engaged through practical applications and interactive lessons. A supportive environment ensures every learner thrives.'
+        },
+        {
+            title: 'Higher Secondary',
+            fee: '₹50,000',
+            duration: '2 Years',
+            summary: 'Advance academic learning with specialized subjects.',
+            careerPath: 'University, Competitive Exams, Career Foundation',
+            desc: 'Our Higher Secondary curriculum is tailored to prepare students for university and competitive exams. It builds upon core knowledge while introducing specialized subjects. Emphasis is placed on analytical skills and conceptual clarity. The program fosters independent learning and confidence.'
+        },
     ],
     undergraduate: [
-        { title: 'B.A.', fee: '37,400 to 67,200', desc: 'The Bachelor of Arts program offers a broad spectrum of humanities and social science subjects. Students develop strong analytical and communication skills. The curriculum encourages independent thought and creativity. Ideal for those aiming for careers in education, writing, administration, and public service.' },
-        { title: 'B.Com.', fee: '42,600', desc: 'Bachelor of Commerce is perfect for students interested in finance, business, and economics. It covers topics like accounting, taxation, and corporate law. The course builds a strong foundation in financial literacy and business management. Graduates are well-equipped for careers in banking, commerce, or entrepreneurship.' },
-        { title: 'B.B.A.', fee: '64,900 to 100,600', desc: 'Bachelor of Business Administration blends theoretical knowledge with practical business strategies. It nurtures leadership, critical thinking, and decision-making abilities. The curriculum includes case studies, presentations, and real-world projects. Graduates are ready for dynamic roles in corporate and startup environments.' },
-        { title: 'B.Sc.', fee: '88,900', desc: 'Bachelor of Science caters to students interested in natural sciences and research. It emphasizes rigorous lab work, experimentation, and analytical reasoning. The curriculum is tailored to build a strong base in biology, chemistry, physics, or mathematics. This course is a gateway to research and technical careers.' },
-        { title: 'B.C.A.', fee: '90,900 to 1,14,000', desc: 'Bachelor of Computer Applications focuses on software development, programming, and IT systems. Students get hands-on training in modern technologies and coding languages. The course prepares them for careers in tech companies and startups. A strong blend of theory and practice ensures industry readiness.' },
-        { title: 'B.Lib.', fee: '37,400 to 67,200', desc: 'The Bachelor of Library Science trains students in the organization, management, and dissemination of information. This course is ideal for those who love books and research. Students gain skills in digital archiving, library automation, and classification systems. Graduates are equipped for academic and public library careers.' },
+        {
+            title: 'B.A.',
+            fee: '₹37,400 – ₹67,200',
+            duration: '3 Years',
+            summary: 'Explore humanities and social sciences for holistic development.',
+            careerPath: 'Education, Civil Services, Journalism, Writing',
+            desc: 'The Bachelor of Arts program offers a broad spectrum of humanities and social science subjects. Students develop strong analytical and communication skills. The curriculum encourages independent thought and creativity. Ideal for those aiming for careers in education, writing, administration, and public service.'
+        },
+        {
+            title: 'B.Com.',
+            fee: '₹42,600',
+            duration: '3 Years',
+            summary: 'Learn commerce fundamentals and financial literacy.',
+            careerPath: 'Banking, Finance, Accounting, Business',
+            desc: 'Bachelor of Commerce is perfect for students interested in finance, business, and economics. It covers topics like accounting, taxation, and corporate law. The course builds a strong foundation in financial literacy and business management.'
+        },
+        {
+            title: 'B.B.A.',
+            fee: '₹64,900 – ₹1,00,600',
+            duration: '3 Years',
+            summary: 'Business education blending theory and practical knowledge.',
+            careerPath: 'Corporate Management, Entrepreneurship, Startups',
+            desc: 'Bachelor of Business Administration blends theoretical knowledge with practical business strategies. It nurtures leadership, critical thinking, and decision-making abilities through real-world projects.'
+        },
+        {
+            title: 'B.Sc.',
+            fee: '₹88,900',
+            duration: '3 Years',
+            summary: 'Explore the world of science through rigorous academics.',
+            careerPath: 'Research, Analytics, Technical Roles, Teaching',
+            desc: 'Bachelor of Science caters to students interested in natural sciences and research. It emphasizes lab work and analytical reasoning in fields like biology, chemistry, and mathematics.'
+        },
+        {
+            title: 'B.C.A.',
+            fee: '₹90,900 – ₹1,14,000',
+            duration: '3 Years',
+            summary: 'Start a career in software development and IT.',
+            careerPath: 'Software Developer, Web Developer, IT Support',
+            desc: 'Bachelor of Computer Applications focuses on programming, IT systems, and hands-on training in modern technologies to prepare students for tech careers.'
+        },
+        {
+            title: 'B.Lib.',
+            fee: '₹37,400 – ₹67,200',
+            duration: '1 Year',
+            summary: 'Learn library science and information management.',
+            careerPath: 'Academic Libraries, Digital Archiving, Cataloguing',
+            desc: 'The Bachelor of Library Science trains students in organizing, managing, and disseminating information using digital tools and classification systems.'
+        },
     ],
     postgraduate: [
-        { title: 'M.A.', fee: '37,400 to 67,200', desc: 'Master of Arts enables specialization in fields like literature, history, and political science. It enhances analytical, critical thinking, and research skills. The course is rich in academic discourse and written expression. Graduates can pursue careers in teaching, research, or civil services.' },
-        { title: 'M.Com.', fee: '42,600', desc: 'Master of Commerce focuses on advanced business and financial concepts. It delves into financial strategy, investment planning, and accounting systems. Ideal for students aiming for senior roles in finance or academics. The program also lays the groundwork for professional certifications like CA or CFA.' },
-        { title: 'M.B.A.', fee: '64,900 to 100,600', desc: 'Master of Business Administration is designed to develop leaders and business strategists. The program includes case studies, market research, and management simulations. Students are trained in marketing, HR, finance, and operations. This versatile degree opens doors to corporate leadership and entrepreneurship.' },
-        { title: 'M.Sc.', fee: '88,900', desc: 'Master of Science is ideal for those pursuing careers in research, analytics, and scientific innovation. It includes advanced labs, fieldwork, and thesis writing. Students engage in complex problem-solving and in-depth analysis. The course is a gateway to both academia and industry roles.' },
-        { title: 'M.C.A.', fee: '90,900 to 1,14,000', desc: 'Master of Computer Applications offers deep insights into software development, systems management, and application design. It is geared toward students aiming for leadership roles in tech. The curriculum includes internships and real-world tech challenges. Graduates are highly sought after in the IT industry.' },
-        { title: 'M.Lib.', fee: '37,400 to 67,200', desc: 'Master of Library Science delves into digital information management, data archiving, and library technology systems. The course encourages efficient knowledge organization and retrieval. Ideal for those aiming to manage academic, digital, or research libraries. It equips students with modern tools for information services.' },
+        {
+            title: 'M.A.',
+            fee: '₹37,400 – ₹67,200',
+            duration: '2 Years',
+            summary: 'Advanced humanities education for critical thinkers.',
+            careerPath: 'Teaching, Civil Services, Research, Content Creation',
+            desc: 'Master of Arts enables specialization in literature, history, or political science, enhancing analytical and research skills for academic and professional careers.'
+        },
+        {
+            title: 'M.Com.',
+            fee: '₹42,600',
+            duration: '2 Years',
+            summary: 'Master finance and commerce for business leadership.',
+            careerPath: 'Chartered Accountant, CFA, Finance Manager',
+            desc: 'Master of Commerce focuses on advanced financial and business concepts including investment planning and accounting systems.'
+        },
+        {
+            title: 'M.B.A.',
+            fee: '₹64,900 – ₹1,00,600',
+            duration: '2 Years',
+            summary: 'Lead in business with practical managerial training.',
+            careerPath: 'Corporate Strategy, Marketing, HR, Entrepreneurship',
+            desc: 'Master of Business Administration develops leadership through market research, case studies, and business simulations.'
+        },
+        {
+            title: 'M.Sc.',
+            fee: '₹88,900',
+            duration: '2 Years',
+            summary: 'Deepen your scientific expertise through research.',
+            careerPath: 'Lab Research, Data Analytics, Scientific Writing',
+            desc: 'Master of Science is ideal for research-driven students focusing on innovation, analysis, and specialized lab work.'
+        },
+        {
+            title: 'M.C.A.',
+            fee: '₹90,900 – ₹1,14,000',
+            duration: '2 Years',
+            summary: 'Advanced computer application and system design.',
+            careerPath: 'Software Engineer, System Analyst, IT Consultant',
+            desc: 'Master of Computer Applications offers deep knowledge of software development and real-world tech challenges through internships and practical projects.'
+        },
+        {
+            title: 'M.Lib.',
+            fee: '₹37,400 – ₹67,200',
+            duration: '1 Year',
+            summary: 'Manage digital and traditional knowledge systems.',
+            careerPath: 'Library Management, Information Services',
+            desc: 'Master of Library Science focuses on digital information management, data archiving, and modern library tools.'
+        },
     ],
     diploma: [
-        { title: 'Fire & Safety', fee: '37,400 to 67,200', desc: 'The Fire & Safety diploma provides technical and practical knowledge in disaster management, risk assessment, and safety protocols. Students learn how to respond to emergencies and implement fire prevention systems. Ideal for careers in industrial safety and public service. The program includes field training and certifications.' },
-        { title: 'PGDCA', fee: '42,600', desc: 'Post Graduate Diploma in Computer Applications is tailored for those seeking careers in IT and software development. It includes hands-on programming, data structures, and system management. A fast-track to roles in web development and support. Graduates gain both coding proficiency and problem-solving skills.' },
-        { title: 'PGDBM', fee: '64,900 to 100,600', desc: 'Post Graduate Diploma in Business Management sharpens leadership and decision-making abilities. The course covers core business disciplines with real-world applications. Great for aspiring entrepreneurs and mid-career professionals. Case studies and business simulations add practical learning to the program.' },
-        { title: 'Hosp. Mang.', fee: '88,900', desc: 'Diploma in Hospital Management offers specialized training in healthcare administration, patient care logistics, and hospital operations. Students gain skills to manage hospital departments and ensure quality healthcare delivery. The curriculum blends theory with clinical exposure. Excellent for roles in private and public health sectors.' },
-        { title: 'Counselling Psycho.', fee: '90,900 to 1,14,000', desc: 'Diploma in Counselling Psychology offers training in mental health support, therapeutic techniques, and client interaction. Ideal for those passionate about helping others. The course includes supervised practice and ethical guidance. Graduates can work in schools, clinics, or private practice.' },
-    ],
+        {
+            title: 'Fire & Safety',
+            fee: '₹37,400 – ₹67,200',
+            duration: '1 Year',
+            summary: 'Learn disaster management and emergency response.',
+            careerPath: 'Industrial Safety, Public Safety Officer',
+            desc: 'The Fire & Safety diploma includes risk assessment, fire prevention systems, and field training for careers in safety and emergency response.'
+        },
+        {
+            title: 'PGDCA',
+            fee: '₹42,600',
+            duration: '1 Year',
+            summary: 'Computer applications for fast-track tech careers.',
+            careerPath: 'Web Developer, IT Support, Programmer',
+            desc: 'Post Graduate Diploma in Computer Applications includes hands-on programming, data structures, and system management.'
+        },
+        {
+            title: 'PGDBM',
+            fee: '₹64,900 – ₹1,00,600',
+            duration: '1 Year',
+            summary: 'Business diploma for aspiring managers.',
+            careerPath: 'Business Analyst, Manager, Entrepreneur',
+            desc: 'Post Graduate Diploma in Business Management enhances leadership and business skills through simulations and case studies.'
+        },
+        {
+            title: 'Hosp. Mang.',
+            fee: '₹88,900',
+            duration: '1 Year',
+            summary: 'Manage hospital operations and healthcare logistics.',
+            careerPath: 'Hospital Admin, Health Services Coordinator',
+            desc: 'Diploma in Hospital Management provides specialized training in patient care and hospital systems with clinical exposure.'
+        },
+        {
+            title: 'Counselling Psycho.',
+            fee: '₹90,900 – ₹1,14,000',
+            duration: '1 Year',
+            summary: 'Train in therapeutic communication and mental health.',
+            careerPath: 'Counsellor, School Psychologist, Private Practice',
+            desc: 'Diploma in Counselling Psychology includes therapeutic techniques, client interaction, and supervised practice.'
+        },
+    ]
 };
 
 const fadeInUp = {
@@ -37,46 +172,85 @@ const fadeInUp = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
-const CourseCard = ({ title, fee, desc }) => {
+const CourseCard = ({ title, fee, desc, duration, careerPath, summary }) => {
     const [showDesc, setShowDesc] = useState(false);
+    const navigate = useNavigate();
 
     return (
         <motion.div
             variants={fadeInUp}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
-            className="bg-white rounded-xl shadow-lg transition-all duration-0 w-60 md:w-64 lg:w-72 flex 
-            flex-col justify-between p-4 border border-purple-100 relative"
+            className="bg-white rounded-xl shadow-lg transition-all duration-300 w-60 md:w-64 lg:w-72 flex 
+            flex-col justify-between p-4 border border-purple-100 relative h-[300px] overflow-hidden"
         >
             <div className="absolute top-2 right-2 bg-purple-100 text-purple-700 text-xs px-2 py-1 
             rounded-full font-medium shadow-sm">
                 <FaGraduationCap />
             </div>
-            <h3 className="text-lg font-semibold text-purple-700 mb-2">{title}</h3>
-            <p className="text-sm text-gray-600">Fee:</p>
-            <p className="text-base font-bold text-purple-500 mb-2">{fee}</p>
-            <button
-                className="text-sm text-pink-500 underline hover:text-pink-700 transition mb-2 cursor-pointer"
-                onClick={() => setShowDesc(!showDesc)}
-            >
-                {showDesc ? 'Hide Description' : 'See Description'}
-            </button>
-            <AnimatePresence>
-                {showDesc && (
-                    <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.03, ease: "easeInOut" }}
-                        className="mt-2 text-sm text-gray-700 italic leading-snug max-h-60 overflow-auto"
-                    >
-                        {desc}
-                    </motion.div>
-                )}
-            </AnimatePresence>
+
+            <div className="flex-1 flex flex-col overflow-hidden">
+                <h3 className="text-lg font-semibold text-purple-700 mb-2">{title}</h3>
+
+                <div className="text-sm text-gray-600 mb-1">
+                    <span className="font-medium text-gray-700">Fee:</span>{' '}
+                    <span className="text-purple-500 font-semibold">{fee}</span>
+                </div>
+
+                <div className="text-sm text-gray-600 mb-1">
+                    <span className="font-medium text-gray-700">Duration:</span> {duration}
+                </div>
+
+                <div className="text-sm text-gray-600 mb-2">
+                    <span className="font-medium text-gray-700">Career Path:</span> {careerPath}
+                </div>
+
+                <div className="relative flex-1 overflow-hidden">
+                    <AnimatePresence mode="wait">
+                        {!showDesc ? (
+                            <motion.p
+                                key="summary"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.2 }}
+                                className="text-sm text-gray-600 absolute top-0 left-0 right-0"
+                            >
+                                <span className="font-medium text-gray-700">Summary:</span> {summary}
+                            </motion.p>
+                        ) : (
+                            <motion.div
+                                key="description"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.2 }}
+                                className="text-sm text-gray-700 italic leading-snug absolute top-0 left-0 right-0 bottom-0 overflow-y-auto pr-1"
+                            >
+                                {desc}
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
+                </div>
+
+                <button
+                    className="text-sm text-pink-500 underline hover:text-pink-700 transition mt-2 self-start cursor-pointer"
+                    onClick={() => setShowDesc(!showDesc)}
+                >
+                    {showDesc ? 'Back to Summary' : 'See Description'}
+                </button>
+
+                <button
+                    className="text-sm text-pink-500 underline hover:text-pink-700 transition mt-2 self-start cursor-pointer"
+                    onClick={() => navigate(`/colleges/${encodeURIComponent(title)}`)}
+                >
+                    See Colleges
+                </button>
+            </div>
         </motion.div>
     );
 };
+
 
 const CourseSection = ({ title, data }) => (
     <motion.section
@@ -95,7 +269,8 @@ const CourseSection = ({ title, data }) => (
         </motion.h2>
         <div className="flex flex-wrap justify-center gap-6 items-start">
             {data.map((item, index) => (
-                <CourseCard key={index} title={item.title} fee={item.fee} desc={item.desc} />           
+                <CourseCard key={index} title={item.title} fee={item.fee} desc={item.desc}
+                    summary={item.summary} duration={item.duration} careerPath={item.careerPath} />
             ))}
         </div>
     </motion.section>
@@ -110,7 +285,7 @@ const CourseDetails = () => {
                 hidden: { opacity: 0 },
                 visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
             }}
-            className="px-6 md:px-16 py-16 bg-gradient-to-br from-white via-purple-50 to-white min-h-screen"
+            className="px-6 md:px-16 py-16 bg-white min-h-screen"
         >
             <motion.h1
                 variants={fadeInUp}
