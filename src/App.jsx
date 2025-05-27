@@ -10,6 +10,7 @@ import Enroll from './pages/Enroll'
 import Counselling from './pages/Counselling'
 import Collaboration from './pages/Collaboration'
 import CollegeList from './pages/CollegeList'
+import UniversityComparison from './pages/UniversitiyComparison'
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
           <Route path='/enroll' element={<Enroll />} />
           <Route path='/counselling' element={<Counselling />} />
           <Route path='/collaboration' element={<Collaboration />} />
+          <Route path='/university' element={<UniversityComparison />} />
           <Route path="/colleges/:courseName" element={<CollegeList />} />
         </Routes>
         <Footer />

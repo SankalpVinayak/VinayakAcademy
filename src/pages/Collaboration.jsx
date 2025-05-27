@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 const universityPartners = [
-    "/logos/oxford.png",
-    "/logos/harvard.png",
-    "/logos/mit.png",
-    "/logos/stanford.png",
-    "/logos/nus.png",
-    "/logos/cambridge.png",
+    "https://logowik.com/content/uploads/images/upes-university-of-petroleum-and-energy-studies1209.jpg",
+    "https://logowik.com/content/uploads/images/amity-university9126.jpg",
+    "https://www.ul.ie/sites/default/files/styles/max_content/public/global/8D7CB9C2-6D38-488E-AFE6-F2E85BB118F6.jpeg.webp?itok=BR2PYx_A",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7RxRBXIkHsIqqY6DidlQuvkGgJb96XHnBGg&s",
+    "https://static.theprint.in/wp-content/uploads/2022/07/Lovely_Professional_University_LPU2022071812113420220718123229.jpg",
+    "https://upload.wikimedia.org/wikipedia/hi/6/6a/Nalanda_University_Logo.png",
 ];
 
 

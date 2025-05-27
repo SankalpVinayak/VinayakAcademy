@@ -5,12 +5,14 @@ import Impact from "./Impact";
 import WhyUs from "./WhyUs";
 import Values from "./Values";
 import SuccessStories from "./SuccessStories";
+import HeroBanner from "./HeroBanner";
 
 const HeroSection = () => {
     const [activeTab, setActiveTab] = useState("impact");
 
     return (
         <div className="overflow-hidden">
+
             {/* Hero Sec. */}
             <div className="grid md:grid-cols-2 gap-y-8 items-center px-8 md:px-20 pt-16 md:gap-x-12">
 

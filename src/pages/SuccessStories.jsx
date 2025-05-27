@@ -26,7 +26,7 @@ const successData = [
             "Switching from Science to Design was a big leap, but their career counselling gave me clarity and direction.",
         outcome: "Admitted to NIFT – Fashion Communication",
         image:
-            "https://jecrcuniversity.edu.in/wp-content/uploads/2023/02/7-THINGS -TO-MAKE-STUDENTS-LIFE-EASIER.jpg.webp",
+            "https://jecrcuniversity.edu.in/wp-content/uploads/2023/02/7-THINGS-TO-MAKE-STUDENTS-LIFE-EASIER.jpg.webp",
         label: "Career Shift",
     },
     {
@@ -35,7 +35,7 @@ const successData = [
             "Vinayak’s mentorship helped me balance school and CUET prep, and I cracked it with flying colours.",
         outcome: "CUET Top Ranker – B.A. Political Science, BHU",
         image:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV4_P-2IT7y_q4sKu_fD5ImdA7gBh6gnQRXw&s",
+            "https://res.cloudinary.com/highereducation/images/f_auto,q_auto/v1695822409/ComputerScience.org/student-studying-with-help-from-AI-tools/student-studying-with-help-from-AI-tools.jpg?_i=AA",
         label: "CUET Cracker",
     },
     {

@@ -2,7 +2,7 @@ import { ClipboardCheck, MessageSquareHeart, Waypoints, } from "lucide-react";
 import { MessageSquareQuote, PhoneCall, MapPin } from "lucide-react";
 import { Compass, School, Globe, Users, FileBarChart2, Brain } from "lucide-react"
 import { motion } from "framer-motion";
-// import counsellingImg from "./path/to/counselling-image.jpg"; // Replace with your image
+
 
 const steps = [
     {

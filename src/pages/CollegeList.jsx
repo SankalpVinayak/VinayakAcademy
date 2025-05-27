@@ -22,12 +22,12 @@ const CollegeList = () => {
     }, [courseName]);
 
     return (
-        <div className="p-8 bg-gradient-to-br from-purple-50 to-gray-100 min-h-screen">
+        <div className="bg-gradient-to-br p-8 from-purple-50 to-gray-100 min-h-screen">
             <h2 className="text-4xl font-extrabold text-center text-purple-800 mb-12 tracking-tight">
                 Colleges Offering <span className="text-gray-800">"{courseName}"</span>
             </h2>
 
-            <div className="flex flex-wrap justify-center gap-10 max-w-7xl mx-auto">
+            <div className="flex flex-wrap flex-grow justify-center gap-10 max-w-7xl mx-auto">
                 {colleges.map((college, idx) => (
                     <div
                         key={idx}

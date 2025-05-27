@@ -1,171 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaGraduationCap } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import { summary } from 'framer-motion/client';
 import { Navigate, useNavigate } from 'react-router-dom';
-
-const courses = {
-    schooling: [
-        {
-            title: 'Secondary',
-            fee: '₹40,000',
-            duration: '2 Years',
-            summary: 'Build strong foundational skills in core academic subjects.',
-            careerPath: 'Preparation for Higher Secondary & Competitive Exams',
-            desc: 'The Secondary program focuses on foundational academic subjects, encouraging critical thinking and a deep understanding of core concepts. This course is designed to strengthen the base for future academic pursuits. Students are engaged through practical applications and interactive lessons. A supportive environment ensures every learner thrives.'
-        },
-        {
-            title: 'Higher Secondary',
-            fee: '₹50,000',
-            duration: '2 Years',
-            summary: 'Advance academic learning with specialized subjects.',
-            careerPath: 'University, Competitive Exams, Career Foundation',
-            desc: 'Our Higher Secondary curriculum is tailored to prepare students for university and competitive exams. It builds upon core knowledge while introducing specialized subjects. Emphasis is placed on analytical skills and conceptual clarity. The program fosters independent learning and confidence.'
-        },
-    ],
-    undergraduate: [
-        {
-            title: 'B.A.',
-            fee: '₹37,400 – ₹67,200',
-            duration: '3 Years',
-            summary: 'Explore humanities and social sciences for holistic development.',
-            careerPath: 'Education, Civil Services, Journalism, Writing',
-            desc: 'The Bachelor of Arts program offers a broad spectrum of humanities and social science subjects. Students develop strong analytical and communication skills. The curriculum encourages independent thought and creativity. Ideal for those aiming for careers in education, writing, administration, and public service.'
-        },
-        {
-            title: 'B.Com.',
-            fee: '₹42,600',
-            duration: '3 Years',
-            summary: 'Learn commerce fundamentals and financial literacy.',
-            careerPath: 'Banking, Finance, Accounting, Business',
-            desc: 'Bachelor of Commerce is perfect for students interested in finance, business, and economics. It covers topics like accounting, taxation, and corporate law. The course builds a strong foundation in financial literacy and business management.'
-        },
-        {
-            title: 'B.B.A.',
-            fee: '₹64,900 – ₹1,00,600',
-            duration: '3 Years',
-            summary: 'Business education blending theory and practical knowledge.',
-            careerPath: 'Corporate Management, Entrepreneurship, Startups',
-            desc: 'Bachelor of Business Administration blends theoretical knowledge with practical business strategies. It nurtures leadership, critical thinking, and decision-making abilities through real-world projects.'
-        },
-        {
-            title: 'B.Sc.',
-            fee: '₹88,900',
-            duration: '3 Years',
-            summary: 'Explore the world of science through rigorous academics.',
-            careerPath: 'Research, Analytics, Technical Roles, Teaching',
-            desc: 'Bachelor of Science caters to students interested in natural sciences and research. It emphasizes lab work and analytical reasoning in fields like biology, chemistry, and mathematics.'
-        },
-        {
-            title: 'B.C.A.',
-            fee: '₹90,900 – ₹1,14,000',
-            duration: '3 Years',
-            summary: 'Start a career in software development and IT.',
-            careerPath: 'Software Developer, Web Developer, IT Support',
-            desc: 'Bachelor of Computer Applications focuses on programming, IT systems, and hands-on training in modern technologies to prepare students for tech careers.'
-        },
-        {
-            title: 'B.Lib.',
-            fee: '₹37,400 – ₹67,200',
-            duration: '1 Year',
-            summary: 'Learn library science and information management.',
-            careerPath: 'Academic Libraries, Digital Archiving, Cataloguing',
-            desc: 'The Bachelor of Library Science trains students in organizing, managing, and disseminating information using digital tools and classification systems.'
-        },
-    ],
-    postgraduate: [
-        {
-            title: 'M.A.',
-            fee: '₹37,400 – ₹67,200',
-            duration: '2 Years',
-            summary: 'Advanced humanities education for critical thinkers.',
-            careerPath: 'Teaching, Civil Services, Research, Content Creation',
-            desc: 'Master of Arts enables specialization in literature, history, or political science, enhancing analytical and research skills for academic and professional careers.'
-        },
-        {
-            title: 'M.Com.',
-            fee: '₹42,600',
-            duration: '2 Years',
-            summary: 'Master finance and commerce for business leadership.',
-            careerPath: 'Chartered Accountant, CFA, Finance Manager',
-            desc: 'Master of Commerce focuses on advanced financial and business concepts including investment planning and accounting systems.'
-        },
-        {
-            title: 'M.B.A.',
-            fee: '₹64,900 – ₹1,00,600',
-            duration: '2 Years',
-            summary: 'Lead in business with practical managerial training.',
-            careerPath: 'Corporate Strategy, Marketing, HR, Entrepreneurship',
-            desc: 'Master of Business Administration develops leadership through market research, case studies, and business simulations.'
-        },
-        {
-            title: 'M.Sc.',
-            fee: '₹88,900',
-            duration: '2 Years',
-            summary: 'Deepen your scientific expertise through research.',
-            careerPath: 'Lab Research, Data Analytics, Scientific Writing',
-            desc: 'Master of Science is ideal for research-driven students focusing on innovation, analysis, and specialized lab work.'
-        },
-        {
-            title: 'M.C.A.',
-            fee: '₹90,900 – ₹1,14,000',
-            duration: '2 Years',
-            summary: 'Advanced computer application and system design.',
-            careerPath: 'Software Engineer, System Analyst, IT Consultant',
-            desc: 'Master of Computer Applications offers deep knowledge of software development and real-world tech challenges through internships and practical projects.'
-        },
-        {
-            title: 'M.Lib.',
-            fee: '₹37,400 – ₹67,200',
-            duration: '1 Year',
-            summary: 'Manage digital and traditional knowledge systems.',
-            careerPath: 'Library Management, Information Services',
-            desc: 'Master of Library Science focuses on digital information management, data archiving, and modern library tools.'
-        },
-    ],
-    diploma: [
-        {
-            title: 'Fire & Safety',
-            fee: '₹37,400 – ₹67,200',
-            duration: '1 Year',
-            summary: 'Learn disaster management and emergency response.',
-            careerPath: 'Industrial Safety, Public Safety Officer',
-            desc: 'The Fire & Safety diploma includes risk assessment, fire prevention systems, and field training for careers in safety and emergency response.'
-        },
-        {
-            title: 'PGDCA',
-            fee: '₹42,600',
-            duration: '1 Year',
-            summary: 'Computer applications for fast-track tech careers.',
-            careerPath: 'Web Developer, IT Support, Programmer',
-            desc: 'Post Graduate Diploma in Computer Applications includes hands-on programming, data structures, and system management.'
-        },
-        {
-            title: 'PGDBM',
-            fee: '₹64,900 – ₹1,00,600',
-            duration: '1 Year',
-            summary: 'Business diploma for aspiring managers.',
-            careerPath: 'Business Analyst, Manager, Entrepreneur',
-            desc: 'Post Graduate Diploma in Business Management enhances leadership and business skills through simulations and case studies.'
-        },
-        {
-            title: 'Hosp. Mang.',
-            fee: '₹88,900',
-            duration: '1 Year',
-            summary: 'Manage hospital operations and healthcare logistics.',
-            careerPath: 'Hospital Admin, Health Services Coordinator',
-            desc: 'Diploma in Hospital Management provides specialized training in patient care and hospital systems with clinical exposure.'
-        },
-        {
-            title: 'Counselling Psycho.',
-            fee: '₹90,900 – ₹1,14,000',
-            duration: '1 Year',
-            summary: 'Train in therapeutic communication and mental health.',
-            careerPath: 'Counsellor, School Psychologist, Private Practice',
-            desc: 'Diploma in Counselling Psychology includes therapeutic techniques, client interaction, and supervised practice.'
-        },
-    ]
-};
+import courseData from '../data/Courses.json'
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -277,6 +115,38 @@ const CourseSection = ({ title, data }) => (
 );
 
 const CourseDetails = () => {
+    const [searchTerm, setSearchTerm] = useState('');
+    const [filteredData, setFilteredData] = useState(null);
+
+    const handleInputChange = (e) => {
+        setSearchTerm(e.target.value);
+    };
+
+    useEffect(() => {
+        const delayDebounce = setTimeout(() => {
+            if (searchTerm.trim() === '') {
+                setFilteredData(null);
+                return;
+            }
+
+            const query = searchTerm.trim().toLowerCase();
+            const filtered = {};
+
+            Object.keys(courseData).forEach((category) => {
+                const matches = courseData[category].filter((course) =>
+                    course.title.toLowerCase().includes(query)
+                );
+                if (matches.length > 0) {
+                    filtered[category] = matches;
+                }
+            });
+
+            setFilteredData(filtered);
+        }, 400); // 400ms debounce
+
+        return () => clearTimeout(delayDebounce); // cleanup
+    }, [searchTerm]);
+
     return (
         <motion.div
             initial="hidden"
@@ -295,12 +165,60 @@ const CourseDetails = () => {
                 Courses We Offer
             </motion.h1>
 
-            <CourseSection title="Foundation Level Courses" data={courses.schooling} />
-            <CourseSection title="Undergraduate Courses" data={courses.undergraduate} />
-            <CourseSection title="Postgraduate Courses" data={courses.postgraduate} />
-            <CourseSection title="Diploma Courses" data={courses.diploma} />
+            {/* 🔍 Search Bar */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+                <input
+                    type="text"
+                    placeholder="Type a letter to search..."
+                    className="w-full sm:w-96 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    value={searchTerm}
+                    onChange={handleInputChange}
+                />
+                <button
+                    onClick={() => {
+                        setSearchTerm('');
+                        setFilteredData(null);
+                    }}
+                    className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-all"
+                >
+                    Search
+                </button>
+                {searchTerm && (
+                    <button
+                        onClick={() => {
+                            setSearchTerm('');
+                            setFilteredData(null);
+                        }}
+                        className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-all"
+                    >
+                        Clear
+                    </button>
+                )}
+            </div>
+
+            {/* Render Filtered or Full Course Data */}
+            {filteredData ? (
+                Object.keys(filteredData).length > 0 ? (
+                    <>
+                        {filteredData.schooling && <CourseSection title="Foundation Level Courses" data={filteredData.schooling} />}
+                        {filteredData.undergraduate && <CourseSection title="Undergraduate Courses" data={filteredData.undergraduate} />}
+                        {filteredData.postgraduate && <CourseSection title="Postgraduate Courses" data={filteredData.postgraduate} />}
+                        {filteredData.diploma && <CourseSection title="Diploma Courses" data={filteredData.diploma} />}
+                    </>
+                ) : (
+                    <p className="text-center text-red-500 text-lg mt-10">
+                        No courses found starting with '{searchTerm.charAt(0)}'
+                    </p>
+                )
+            ) : (
+                <>
+                    <CourseSection title="Foundation Level Courses" data={courseData.schooling} />
+                    <CourseSection title="Undergraduate Courses" data={courseData.undergraduate} />
+                    <CourseSection title="Postgraduate Courses" data={courseData.postgraduate} />
+                    <CourseSection title="Diploma Courses" data={courseData.diploma} />
+                </>
+            )}
         </motion.div>
     );
 };
-
 export default CourseDetails;
