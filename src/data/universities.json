@@ -1,0 +1,142 @@
+[
+    {
+        "id": 1,
+        "name": "UPES",
+        "fee": "Rs.50000",
+        "location": "Deharadun",
+        "courses": [
+            "B.A.",
+            "B.Com.",
+            "M.A."
+        ],
+        "image": "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29sbGVnZSUyMGNhbXB1c3xlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+        "id": 2,
+        "name": "Haridwar University",
+        "fee": "Rs.60000",
+        "location": "Haridwar",
+        "courses": [
+            "B.C.A.",
+            "M.C.A.",
+            "PGDCA"
+        ],
+        "image": "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29sbGVnZSUyMGNhbXB1c3xlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+        "id": 3,
+        "name": "Sage University",
+        "fee": "Rs.60000",
+        "location": "Indore",
+        "courses": [
+            "B.Lib.",
+            "M.Lib.",
+            "B.A."
+        ],
+        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+    },
+    {
+        "id": 4,
+        "name": "MANGALAYATAN ",
+        "fee": "Rs.70000",
+        "location": "Aligarh",
+        "courses": [
+            "B.Lib.",
+            "M.Lib.",
+            "B.A."
+        ],
+        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+    },
+    {
+        "id": 5,
+        "name": "Shri Vishwakarma Skill University",
+        "fee": "Rs.60000",
+        "location": "Pawal, Haryana",
+        "courses": [
+            "B.Lib.",
+            "M.Lib.",
+            "B.A."
+        ],
+        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+    },
+    {
+        "id": 6,
+        "name": "Suresh Gyan Vihar University",
+        "fee": "Rs.60000",
+        "location": "Jaipur",
+        "courses": [
+            "B.Lib.",
+            "M.Lib.",
+            "B.A."
+        ],
+        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+    },
+    {
+        "id": 7,
+        "name": "Guru Kashi University",
+        "fee": "Rs.60000",
+        "location": "Talawabdi Sabo, Punjab",
+        "courses": [
+            "B.Lib.",
+            "M.Lib.",
+            "B.A."
+        ],
+        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+    },
+    {
+        "id": 8,
+        "name": "Asian International University",
+        "fee": "Rs.60000",
+        "location": "Imphal, Manipur",
+        "courses": [
+            "B.Lib.",
+            "M.Lib.",
+            "B.A."
+        ],
+        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+    },
+    {
+        "id": 9,
+        "name": "Board of Open Schooling and Skill Education",
+        "fee": "Rs.60000",
+        "location": "Online",
+        "courses": [
+            "Secondary",
+            "Higher Secondary"
+        ],
+        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+    },
+    {
+        "id": 10,
+        "name": "Parul University",
+        "fee": "Rs.60000",
+        "location": "Vadodra",
+        "courses": [
+            "Secondary",
+            "Higher Secondary"
+        ],
+        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+    },
+    {
+        "id": 11,
+        "name": "Amity University",
+        "fee": "Rs.100000",
+        "location": "Noida, Lucknow",
+        "courses": [
+            "Secondary",
+            "Higher Secondary"
+        ],
+        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+    },
+    {
+        "id": 12,
+        "name": "Loverly Professional University",
+        "fee": "Rs.60000",
+        "location": "Noida",
+        "courses": [
+            "Secondary",
+            "Higher Secondary"
+        ],
+        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+    }
+]

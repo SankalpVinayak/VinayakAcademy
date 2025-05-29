@@ -1,6 +1,7 @@
 import { Star, Handshake, Users, Trophy, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import UniversitySlider from "./UniversitySlider";
 
 const universityPartners = [
     "https://logowik.com/content/uploads/images/upes-university-of-petroleum-and-energy-studies1209.jpg",
@@ -156,6 +157,8 @@ const Collaboration = () => {
                     <p className="text-purple-700 font-bold text-lg">— Dr. Amelia Hart, Global Relations Officer, Cambridge University</p>
                 </div>
             </div>
+
+            <UniversitySlider />
 
             {/* Spotlight Collaboration Section */}
             <section className="bg-white py-24 px-6 md:px-20">

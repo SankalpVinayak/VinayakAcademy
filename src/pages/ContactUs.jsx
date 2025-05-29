@@ -91,82 +91,97 @@
 // export default ContactUs
 
 import React from 'react'
-import { Mail, Phone, MapPin, Building2 } from 'lucide-react'
+import { Mail, PhoneCall, MapPin, Building2 } from 'lucide-react'
 import contactImage from '../assets/cuate.svg' // Add your illustration here
+import logo from '../assets/VALogo2.svg'
 
 const ContactUs = () => {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-purple-100 via-white to-gray-100">
-            {/* Hero Section */}
-            <div className="relative bg-purple-600 h-50 flex items-center justify-center text-white text-center">
-                <h1 className="text-4xl md:text-5xl font-extrabold drop-shadow-lg tracking-wide -mt-8">
-                    Get in Touch With Us
-                </h1>
-                <div className="absolute bottom-0 left-0 right-0 h-12 bg-white rounded-t-3xl"></div>
+        <div className="min-h-screen bg-white py-8 px-6 md:px-35">
+            {/* Header */}
+            <div className="text-center mb-16">
+                <img src={logo} alt="Vinayak Academy Logo" className="mx-auto h-20 mb-4" />
+                <h2 className="text-4xl md:text-5xl font-extrabold text-purple-800 tracking-tight">
+                    Get in Touch with Us
+                </h2>
             </div>
 
-            {/* Main Content Section */}
-            <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                {/* Left Column - Contact Details */}
-                <div className="order-2 space-y-10">
-                    {/* Email & Phone */}
-                    <div className="bg-purple-200 backdrop-blur-md p-8 rounded-3xl shadow-md border border-purple-100 hover:shadow-xl transition">
-                        <h2 className="text-2xl font-bold text-purple-700 flex items-center gap-2 mb-4">
-                            <Mail className="text-purple-500" /> Email & Phone
-                        </h2>
-                        <p className="text-gray-700"><strong>Email:</strong> info@vinayakacademy@gmail.com</p>
-                        <p className="text-gray-700"><strong>Phone:</strong> +91-7985206307</p>
+            {/* Main Section */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-8">
+                {/* Contact Info Section */}
+                <div className="flex flex-col gap-6">
+                    {/* Email */}
+                    <div className="flex items-start gap-4 bg-gradient-to-br from-white via-purple-50 to-white p-6 rounded-2xl shadow-lg border border-purple-100 hover:shadow-2xl transition-all duration-300">
+                        <div className="p-3 rounded-full bg-purple-100 text-purple-700">
+                            <Mail className="h-6 w-6" />
+                        </div>
+                        <div>
+                            <h3 className="text-lg font-bold text-purple-800">Email</h3>
+                            <p className="text-gray-700">info@vinayakacademy.com</p>
+                        </div>
                     </div>
 
-                    {/* Head Office */}
-                    <div className="bg-purple-200 backdrop-blur-md p-8 rounded-3xl shadow-md border border-purple-100 hover:shadow-xl transition">
-                        <h2 className="text-2xl font-bold text-purple-700 flex items-center gap-2 mb-4">
-                            <MapPin className="text-purple-500" /> Head Office
-                        </h2>
-                        <p className="text-gray-700 leading-relaxed">
-                            Ramraja Colony, Civil Lines,<br />
-                            Jhansi, Uttar Pradesh - 284001
-                        </p>
+                    {/* Phone */}
+                    <div className="flex items-start gap-4 bg-gradient-to-br from-white via-purple-50 to-white p-6 rounded-2xl shadow-lg border border-purple-100 hover:shadow-2xl transition-all duration-300">
+                        <div className="p-3 rounded-full bg-purple-100 text-purple-700">
+                            <PhoneCall className="h-6 w-6" />
+                        </div>
+                        <div>
+                            <h3 className="text-lg font-bold text-purple-800">Phone</h3>
+                            <p className="text-gray-700">+91-7985206307</p>
+                        </div>
                     </div>
 
-                    {/* Branches */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div className="bg-purple-200 backdrop-blur-md p-6 rounded-2xl shadow-md hover:shadow-xl border border-purple-100">
-                            <h3 className="text-lg font-semibold text-purple-600 mb-2 flex items-center gap-2">
-                                <Building2 className="text-purple-500" /> Noida
-                            </h3>
-                            <p className="text-gray-700 text-sm">
-                                Omega Plaza, Connaught Place,<br />
-                                Noida – 110001
-                            </p>
+
+                    {/* Branch Offices */}
+                    <div className="flex items-start gap-4 bg-gradient-to-br from-white via-purple-50 to-white p-6 rounded-2xl shadow-lg border border-purple-100 hover:shadow-2xl transition-all duration-300">
+                        <div className="p-3 rounded-full bg-purple-100 text-purple-700">
+                            <Building2 className="h-6 w-6" />
                         </div>
-                        <div className="bg-purple-200 backdrop-blur-md p-6 rounded-2xl shadow-md hover:shadow-xl border border-purple-100">
-                            <h3 className="text-lg font-semibold text-purple-600 mb-2 flex items-center gap-2">
-                                <Building2 className="text-purple-500" /> Bareily
-                            </h3>
-                            <p className="text-gray-700 text-sm">
-                                Nova Chambers,<br />
-                                Bareily – 400053
-                            </p>
-                        </div>
-                        <div className="bg-purple-200 backdrop-blur-md p-6 rounded-2xl shadow-md hover:shadow-xl border border-purple-100">
-                            <h3 className="text-lg font-semibold text-purple-600 mb-2 flex items-center gap-2">
-                                <Building2 className="text-purple-500" /> Lucknow
-                            </h3>
-                            <p className="text-gray-700 text-sm">
-                                Hazratganj,<br />
-                                Lucknow – 400053
-                            </p>
+                        <div>
+                            <h3 className="text-lg font-bold text-purple-800 mb-2">Branch Offices</h3>
+                            <ul className="space-y-3">
+                                <li className="flex items-center gap-3 text-gray-700">
+                                    <span className="w-2 h-2 rounded-full bg-purple-600 mt-1" />
+                                    <span className="font-semibold text-purple-900">Jhansi (Head Office)</span>
+                                </li>
+                                <li className="flex items-center gap-3 text-gray-700">
+                                    <span className="w-2 h-2 rounded-full bg-purple-500 mt-1" />
+                                    <span>Nagpur</span>
+                                </li>
+                                <li className="flex items-center gap-3 text-gray-700">
+                                    <span className="w-2 h-2 rounded-full bg-purple-500 mt-1" />
+                                    <span>Bareily</span>
+                                </li>
+                                <li className="flex items-center gap-3 text-gray-700">
+                                    <span className="w-2 h-2 rounded-full bg-purple-500 mt-1" />
+                                    <span>Vadodra</span>
+                                </li>
+                                <li className="flex items-center gap-3 text-gray-700">
+                                    <span className="w-2 h-2 rounded-full bg-purple-500 mt-1" />
+                                    <span>Pune</span>
+                                </li>
+                            </ul>
+
                         </div>
                     </div>
                 </div>
 
-                {/* Right Column - Visual Illustration */}
-                <div className="order-1 md:order-none flex justify-center -mt-8">
+
+                {/* Illustration Section */}
+                <div className="relative bg-purple-100/60 backdrop-blur-md rounded-3xl p-8 shadow-lg flex items-center justify-center">
+                    {/* Decorative Bubble */}
+                    <div className="absolute top-0 right-0 transform translate-x-8 -translate-y-8 opacity-10">
+                        <svg width="120" height="120" fill="none">
+                            <circle cx="60" cy="60" r="60" fill="#7C3AED" />
+                        </svg>
+                    </div>
+
+                    {/* Illustration */}
                     <img
                         src={contactImage}
                         alt="Contact Illustration"
-                        className="w-full max-w-md lg:max-w-lg object-cover"
+                        className="max-w-full max-h-96 object-contain"
                     />
                 </div>
             </div>

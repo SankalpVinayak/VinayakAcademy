@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import uniData from '../data/universities.json'
 
 const universities = [
     {
@@ -88,7 +89,7 @@ const universities = [
         ranking: '10th',
         location: 'Canada',
         courses: ['CS', 'Biology', 'Chemistry'],
-        fee: 'CA$45,000/year',
+        fee: '$45,000/year',
         image: 'https://upload.wikimedia.org/wikipedia/en/4/45/University_of_Toronto_coat_of_arms.svg',
     },
 ];
@@ -108,97 +109,86 @@ const UniversityComparison = () => {
         }
     };
 
-    const selectedUnis = universities.filter((uni) => selected.includes(uni.id));
+    const clearWarning = () => {
+        setWarning('')
+    }
+
+    const selectedUnis = uniData.filter((uni) => selected.includes(uni.id));
 
     return (
-        <div className="bg-gradient-to-br from-white via-gray-50 to-purple-100 py-20 px-6 md:px-20">
-            <h2 className="text-5xl font-bold text-center text-purple-700 mb-14 tracking-tight drop-shadow-sm">
+        <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 px-4 py-16">
+            <h2 className="text-5xl font-extrabold text-center text-purple-800 mb-10 tracking-tight">
                 Compare Top Universities
             </h2>
 
-            {warning && (
-                <p className="text-red-600 text-center font-medium mb-6 animate-pulse">
-                    {warning}
-                </p>
-            )}
-
-            {/* University Selection Chips */}
-            <div className="flex flex-wrap justify-center gap-4 mb-14">
-                {universities.map((uni) => (
-                    <label
+            <div className="flex flex-wrap justify-center gap-4 mb-10">
+                {uniData.map((uni) => (
+                    <button
                         key={uni.id}
-                        className={`transition-all duration-300 rounded-full px-6 py-2 shadow-sm text-sm font-medium cursor-pointer border ${selected.includes(uni.id)
-                            ? 'bg-purple-100 text-purple-800 border-purple-500'
-                            : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-100'
-                            } hover:scale-105`}
+                        onClick={() => toggleSelection(uni.id)}
+                        className={`px-5 py-2 rounded-full shadow-md text-sm font-semibold transition hover:scale-105 ${selected.includes(uni.id)
+                            ? 'bg-purple-700 text-white'
+                            : 'bg-white text-purple-800 border border-purple-300 hover:bg-purple-100'
+                            }`}
                     >
-                        <input
-                            type="checkbox"
-                            className="hidden"
-                            checked={selected.includes(uni.id)}
-                            onChange={() => toggleSelection(uni.id)}
-                        />
                         {uni.name}
-                    </label>
+                    </button>
                 ))}
             </div>
 
-            {/* Comparison Table */}
+            {warning && (
+                <div className="text-red-600 text-center font-semibold mb-4 animate-pulse">
+                    {warning}
+                    <button onClick={clearWarning} className="ml-4 bg-red-100 hover:bg-red-200 text-red-600 font-semibold px-3 py-1 
+                     rounded-full shadow-sm transition duration-300 inline-block">
+                        Dismiss
+                    </button>
+                </div>
+            )}
+
             {selectedUnis.length > 0 ? (
-                <div className="overflow-x-auto rounded-xl shadow-xl border border-gray-200 bg-white transition-all">
-                    <table className="min-w-full table-auto text-left">
-                        <thead className="bg-purple-700 text-white text-base">
-                            <tr>
-                                <th className="p-5 w-52 font-semibold">Attribute</th>
-                                {selectedUnis.map((uni) => (
-                                    <th key={uni.id} className="p-5 font-semibold text-center">
-                                        <div className="flex flex-col items-center gap-2">
-                                            <img
-                                                src={uni.image}
-                                                alt={uni.name}
-                                                className="h-10 w-10 object-contain rounded-full border border-white shadow-md"
-                                            />
-                                            <span className="text-sm font-medium">{uni.name}</span>
-                                        </div>
-                                    </th>
-                                ))}
-                            </tr>
-                        </thead>
-                        <tbody className="divide-y divide-gray-200 text-sm">
-                            <tr className="bg-gray-50">
-                                <td className="p-4 font-medium">Ranking</td>
-                                {selectedUnis.map((uni) => (
-                                    <td key={uni.id} className="p-4 text-center">{uni.ranking}</td>
-                                ))}
-                            </tr>
-                            <tr>
-                                <td className="p-4 font-medium bg-gray-50">Location</td>
-                                {selectedUnis.map((uni) => (
-                                    <td key={uni.id} className="p-4 text-center">{uni.location}</td>
-                                ))}
-                            </tr>
-                            <tr>
-                                <td className="p-4 font-medium bg-gray-50">Courses Offered</td>
-                                {selectedUnis.map((uni) => (
-                                    <td key={uni.id} className="p-4 text-center whitespace-pre-wrap">
-                                        {uni.courses.join(', ')}
-                                    </td>
-                                ))}
-                            </tr>
-                            <tr>
-                                <td className="p-4 font-medium bg-gray-50">Annual Fee</td>
-                                {selectedUnis.map((uni) => (
-                                    <td key={uni.id} className="p-4 text-center text-purple-700 font-semibold">
-                                        {uni.fee}
-                                    </td>
-                                ))}
-                            </tr>
-                        </tbody>
-                    </table>
+                <div className="flex flex-col items-center space-y-6 lg:flex-row lg:space-y-0 lg:space-x-6 justify-center">
+                    {selectedUnis.map((uni) => (
+                        <div
+                            key={uni.id}
+                            className="bg-white/60 backdrop-blur-md border border-purple-100 rounded-3xl shadow-xl w-full max-w-sm p-6 transition-transform hover:scale-105"
+                        >
+                            <div className="flex flex-col items-center space-y-4">
+                                <img
+                                    src={uni.image}
+                                    alt={uni.name}
+                                    className="h-16 w-16 object-contain"
+                                />
+                                <h3 className="text-xl font-bold text-purple-900 text-center">{uni.name}</h3>
+                                <div className="w-full text-sm text-gray-700 space-y-2 mt-4">
+                                    {/* <div className="flex justify-between font-medium">
+                                        <span>Ranking:</span>
+                                        <span>{uni.ranking}</span>
+                                    </div> */}
+                                    <div className="flex justify-between">
+                                        <span>Location:</span>
+                                        <span>{uni.location}</span>
+                                    </div>
+                                    <div className="flex justify-between">
+                                        <span>Fee:</span>
+                                        <span>{uni.fee}</span>
+                                    </div>
+                                    <div>
+                                        <span className="font-medium">Courses:</span>
+                                        <ul className="list-disc list-inside text-gray-600">
+                                            {uni.courses.map((course, idx) => (
+                                                <li key={idx}>{course}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             ) : (
-                <p className="text-center text-gray-500 text-lg mt-12 italic">
-                    Select up to <span className="font-bold text-purple-600">3</span> universities to compare.
+                <p className="text-center text-gray-500 text-lg mt-10">
+                    Select up to <span className="font-bold text-purple-600">3</span> universities to begin comparison.
                 </p>
             )}
         </div>
