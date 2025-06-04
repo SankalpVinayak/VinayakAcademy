@@ -1,0 +1,518 @@
+[
+    {
+        "id": 1,
+        "name": "UPES",
+        "fee": "Rs.50000",
+        "location": "Deharadun",
+        "logoImage": "https://logowik.com/content/uploads/images/upes-university-of-petroleum-and-energy-studies1209.jpg",
+        "courses": [
+            {
+                "name": "B.A.",
+                "fee": "Rs. 40,000",
+                "subject": "GENERAL",
+                "duration": 3
+            },
+            {
+                "name": "B.A.",
+                "fee": "Rs. 56,000",
+                "subject": "JMC",
+                "duration": 3
+            },
+            {
+                "name": "B.com",
+                "fee": "Rs. 44,500",
+                "subject": "GENERAL",
+                "duration": 3
+            }
+        ],
+        "image": "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29sbGVnZSUyMGNhbXB1c3xlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+        "id": 2,
+        "name": "Haridwar University",
+        "fee": "Rs.60000",
+        "location": "Haridwar",
+        "logoImage": "https://upload.wikimedia.org/wikipedia/en/3/3d/Haridwar_University_logo.png",
+        "courses": [
+            {
+                "name": "B.A.",
+                "fee": "Rs. 40,000",
+                "subject": "GENERAL",
+                "duration": 3
+            },
+            {
+                "name": "B.A.",
+                "fee": "Rs. 56,000",
+                "subject": "JMC",
+                "duration": 3
+            },
+            {
+                "name": "B.com",
+                "fee": "Rs. 44,500",
+                "subject": "GENERAL",
+                "duration": 3
+            }
+        ],
+        "image": "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29sbGVnZSUyMGNhbXB1c3xlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+        "id": 3,
+        "name": "Sage University",
+        "fee": "Rs.60000",
+        "location": "Indore",
+        "logoImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtH2hWYAbD7HB8qyczgVRmfAKUd07oA2xGPw&s",
+        "courses": [
+            {
+                "name": "B.A.",
+                "fee": "Rs. 40,000",
+                "subject": "GENERAL",
+                "duration": 3
+            },
+            {
+                "name": "B.A.",
+                "fee": "Rs. 56,000",
+                "subject": "JMC",
+                "duration": 3
+            },
+            {
+                "name": "B.com",
+                "fee": "Rs. 44,500",
+                "subject": "GENERAL",
+                "duration": 3
+            }
+        ],
+        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+    },
+    {
+        "id": 4,
+        "name": "Mangalayatan University",
+        "fee": "Rs.70000",
+        "location": "Aligarh",
+        "logoImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwDC93Azab2QicGTKSBMxOKyX2mNTvyuaQcw&s",
+        "courses": [
+            {
+                "name": "B.A.",
+                "fee": "Rs. 38,400",
+                "subject": "GENERAL",
+                "duration": 3
+            },
+            {
+                "name": "B.com",
+                "fee": "Rs. 45,000",
+                "subject": "GENERAL",
+                "duration": 3
+            },
+            {
+                "name": "BSC",
+                "fee": "Rs. 76000",
+                "subject": "PCM/PCB/ZBC",
+                "duration": 3
+            },
+            {
+                "name": "BCA",
+                "fee": "Rs. 84000",
+                "subject": "GENERAL",
+                "duration": 3
+            },
+            {
+                "name": "BLIB",
+                "fee": "Rs. 26500",
+                "subject": "GENERAL",
+                "duration": 1
+            },
+            {
+                "name": "MA",
+                "fee": "Rs. 37000",
+                "subject": "HIN/ENG/HIS/POL/SOC",
+                "duration": 2
+            },
+            {
+                "name": "M.com",
+                "fee": "Rs. 37000",
+                "subject": "GENERAL",
+                "duration": 2
+            },
+            {
+                "name": "MSC",
+                "fee": "Rs. 71000",
+                "subject": "Maths",
+                "duration": 2
+            },
+            {
+                "name": "MBA",
+                "fee": "Rs. 77000",
+                "subject": "HR/MARKETING/FINANCE/IT/OPERATIONS",
+                "duration": 2
+            },
+            {
+                "name": "MLIB",
+                "fee": "Rs. 31000",
+                "subject": "GENERAL",
+                "duration": 1
+            },
+            {
+                "name": "DIPLOMA",
+                "fee": "Rs. 31000",
+                "subject": "COMPUTER APPLICATIONS",
+                "duration": 1
+            },
+            {
+                "name": "MCA",
+                "fee": "Rs. 77000",
+                "subject": "GENERAL",
+                "duration": 1
+            },
+            {
+                "name": "PGDCA",
+                "fee": "Rs. 40000",
+                "subject": "GENERAL",
+                "duration": 1
+            }
+        ],
+        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+    },
+    {
+        "id": 5,
+        "name": "Swami Vivekanand Subharti University",
+        "fee": "Rs.60000",
+        "location": "Meerut",
+        "logoImage": "https://svsu.ac.in/assets/imgs/svsu_logo.png",
+        "courses": [
+            {
+                "name": "B.A.",
+                "fee": "Rs. 40,000",
+                "subject": "GENERAL",
+                "duration": 3
+            },
+            {
+                "name": "B.A.",
+                "fee": "Rs. 56,000",
+                "subject": "JMC",
+                "duration": 3
+            },
+            {
+                "name": "B.com",
+                "fee": "Rs. 44,500",
+                "subject": "GENERAL",
+                "duration": 3
+            },
+            {
+                "name": "BBA",
+                "fee": "Rs. 56,500",
+                "subject": "GENERAL",
+                "duration": 3
+            },
+            {
+                "name": "BLIB",
+                "fee": "Rs. 22,500",
+                "subject": "GENERAL",
+                "duration": 1
+            },
+            {
+                "name": "M.com",
+                "fee": "Rs. 38,500",
+                "subject": "GENERAL",
+                "duration": 3
+            },
+            {
+                "name": "MLIB",
+                "fee": "Rs. 26500",
+                "subject": "GENERAL",
+                "duration": 1
+            },
+            {
+                "name": "MA",
+                "fee": "Rs. 38,500",
+                "subject": "HIN/ENG/HIS/POL/SOC/ECO/PUB ADM",
+                "duration": 2
+            },
+            {
+                "name": "MBA",
+                "fee": "Rs. 66,500",
+                "subject": "HR/MARKETING/FINANCE/IT",
+                "duration": 2
+            },
+            {
+                "name": "MA",
+                "fee": "Rs. 43,500",
+                "subject": "EDUCATION",
+                "duration": 2
+            },
+            {
+                "name": "MA",
+                "fee": "Rs. 42,500",
+                "subject": "JMC",
+                "duration": 2
+            },
+            {
+                "name": "MA",
+                "fee": "Rs. 40,500",
+                "subject": "BUDDHISM",
+                "duration": 2
+            }
+        ],
+        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+    },
+    {
+        "id": 6,
+        "name": "Suresh Gyan Vihar University",
+        "fee": "Rs.60000",
+        "location": "Jaipur",
+        "logoImage": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Gyan_Vihar_Logo.jpg",
+        "courses": [
+            {
+                "name": "B.A.",
+                "fee": "Rs. 40,000",
+                "subject": "GENERAL",
+                "duration": 3
+            },
+            {
+                "name": "B.A.",
+                "fee": "Rs. 56,000",
+                "subject": "JMC",
+                "duration": 3
+            },
+            {
+                "name": "B.com",
+                "fee": "Rs. 44,500",
+                "subject": "GENERAL",
+                "duration": 3
+            }
+        ],
+        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+    },
+    {
+        "id": 7,
+        "name": "Guru Kashi University",
+        "fee": "Rs.60000",
+        "location": "Talawabdi Sabo, Punjab",
+        "logoImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHsk5KTC2PYHi852BKUoxFEGJG2m6uHJ6e7w&s",
+        "courses": [
+            {
+                "name": "BA",
+                "fee": "Rs. 73,200",
+                "subject": "GENERAL",
+                "duration": 3
+            },
+            {
+                "name": "BBA",
+                "fee": "Rs. 1,06,800",
+                "subject": "GENERAL",
+                "duration": 3
+            },
+            {
+                "name": "BCA",
+                "fee": "Rs. 1,20,000",
+                "subject": "GENERAL",
+                "duration": 3
+            },
+            {
+                "name": "MA",
+                "fee": "Rs. 60,000",
+                "subject": "HIN/ENG/HIS/POL/SOC/ECO",
+                "duration": 2
+            },
+            {
+                "name": "MCOM",
+                "fee": "Rs. 80,000",
+                "subject": "FINANCE AND TAXATION MANAGEMENT",
+                "duration": 2
+            },
+            {
+                "name": "MBA",
+                "fee": "Rs. 1,20,000",
+                "subject": "HRM/FINANCE/MARKETING/IT/BUSS. ANALYTICS/LOGISTICS/DIGITAL MARKETING",
+                "duration": 2
+            },
+            {
+                "name": "MCA",
+                "fee": "Rs. 1,80,000",
+                "subject": "GENERAL",
+                "duration": 3
+            },
+            {
+                "name": "DIPLOMA",
+                "fee": "Rs. 25,000",
+                "subject": "LIBRARY SCIENCE",
+                "duration": 1
+            },
+            {
+                "name": "DIPLOMA",
+                "fee": "Rs. 25,000",
+                "subject": "EARLY CHILDHOOD CARE AND EDUCATION",
+                "duration": 1
+            },
+            {
+                "name": "DIPLOMA",
+                "fee": "Rs. 25,000",
+                "subject": "COMPUTER APPLICATION",
+                "duration": 1
+            },
+            {
+                "name": "DIPLOMA",
+                "fee": "Rs. 25,000",
+                "subject": "BUSINESS ADMINISTRATION",
+                "duration": 1
+            },
+            {
+                "name": "DIPLOMA",
+                "fee": "Rs. 25,000",
+                "subject": "JOURNALISM AND REPORTING",
+                "duration": 1
+            }
+        ],
+        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+    },
+    {
+        "id": 8,
+        "name": "Asian International University",
+        "fee": "Rs.60000",
+        "location": "Imphal, Manipur",
+        "logoImage": "https://seeklogo.com/images/A/asian-international-university-manipur-logo-4EBFC0A259-seeklogo.com.png",
+        "courses": [
+            {
+                "name": "MHM",
+                "fee": "Rs. 13,00,000",
+                "subject": "Hotel Management",
+                "duration": 2
+            },
+            {
+                "name": "P.G Diploma",
+                "fee": "Rs. 60,000",
+                "subject": "Guidance & Counseling / Early Childhood Care & Education",
+                "duration": 1
+            },
+            {
+                "name": "B.Tech",
+                "fee": "Rs. 3,00,000",
+                "subject": "Automobile / Bio-Technology / Civil / Electricals / Electricals & Electronics / Electronics & Communication / Mechanical / Textile Engineering / Fire & Industrial / Production Engineering / Chemical Engineering / Instrumentation Engineering / Dairy Engineering / Computer Application / Agriculture Engineering / Information Technology / Software Engineering / Bio-Informatics / Bio-Chemistry",
+                "duration": 4
+            },
+            {
+                "name": "M.Tech",
+                "fee": "Rs. 1,70,000",
+                "subject": "Civil / Electrical / Electrical & Electronics / Electronics & Communication / Mechanical / Information Technology",
+                "duration": 2
+            },
+            {
+                "name": "Diploma",
+                "fee": "Rs. 1,26,000",
+                "subject": "Automobile Engineering / Chemical Engineering / Civil Engineering / Computer Science & Engineering / Electrical Engineering / Electricals & Electronics Engineering / Electronics & Communication Engineering / Information Technology Engineering / Instrumental Technology Engineering / Mechanical Engineering / Biotechnology / Bio-Informatics / Bio-Chemistry",
+                "duration": 3
+            },
+            {
+                "name": "LL.B.",
+                "fee": "Rs. 2,10,000",
+                "subject": "General",
+                "duration": 3
+            }
+        ],
+        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+    },
+    {
+        "id": 9,
+        "name": "Board of Open Schooling and Skill Education",
+        "fee": "Rs.60000",
+        "location": "Online,Sikkim",
+        "logoImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSg3eG5TcI8tEofKgBSAXRl_wqFiEYDZN6GA&s",
+        "courses": [
+            {
+                "name": "SECONDARY",
+                "fee": "Rs. 30,000",
+                "subject": "GENERAL",
+                "duration": 1
+            },
+            {
+                "name": "HIGHER SECONDARY",
+                "fee": "Rs. 35,000",
+                "subject": "GENERAL",
+                "duration": 1
+            }
+        ],
+        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+    },
+    {
+        "id": 10,
+        "name": "Parul University",
+        "fee": "Rs.60000",
+        "location": "Vadodra",
+        "logoImage": "https://seeklogo.com/images/P/parul-university-logo-E549D59E4B-seeklogo.com.png",
+        "courses": [
+            {
+                "name": "B.A.",
+                "fee": "Rs. 40,000",
+                "subject": "GENERAL",
+                "duration": 3
+            },
+            {
+                "name": "B.A.",
+                "fee": "Rs. 56,000",
+                "subject": "JMC",
+                "duration": 3
+            },
+            {
+                "name": "B.com",
+                "fee": "Rs. 44,500",
+                "subject": "GENERAL",
+                "duration": 3
+            }
+        ],
+        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+    },
+    {
+        "id": 11,
+        "name": "Amity University",
+        "fee": "Rs.100000",
+        "location": "Noida, Lucknow",
+        "logoImage": "https://i.pinimg.com/736x/15/f9/0c/15f90c2a6d66896f71338be308e681b3.jpg",
+        "courses": [
+            {
+                "name": "B.A.",
+                "fee": "Rs. 40,000",
+                "subject": "GENERAL",
+                "duration": 3
+            },
+            {
+                "name": "B.A.",
+                "fee": "Rs. 56,000",
+                "subject": "JMC",
+                "duration": 3
+            },
+            {
+                "name": "B.com",
+                "fee": "Rs. 44,500",
+                "subject": "GENERAL",
+                "duration": 3
+            }
+        ],
+        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+    },
+    {
+        "id": 12,
+        "name": "Loverly Professional University",
+        "fee": "Rs.60000",
+        "location": "Phagwara, Punjab",
+        "logoImage": "https://images.seeklogo.com/logo-png/34/2/lpu-sae-india-collegiate-club-logo-png_seeklogo-345773.png",
+        "courses": [
+            {
+                "name": "B.A.",
+                "fee": "Rs. 40,000",
+                "subject": "GENERAL",
+                "duration": 3
+            },
+            {
+                "name": "B.A.",
+                "fee": "Rs. 56,000",
+                "subject": "JMC",
+                "duration": 3
+            },
+            {
+                "name": "B.com",
+                "fee": "Rs. 44,500",
+                "subject": "GENERAL",
+                "duration": 3
+            }
+        ],
+        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+    }
+]

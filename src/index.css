@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@layer utilities {
+    .stroke-text {
+        -webkit-text-stroke: 1.5px #c026d3;
+        /* Tailwind's pink-600 */
+        color: transparent;
+    }
+}
