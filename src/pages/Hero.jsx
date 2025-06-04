@@ -5,7 +5,6 @@ import Impact from "./Impact";
 import WhyUs from "./WhyUs";
 import Values from "./Values";
 import SuccessStories from "./SuccessStories";
-import HeroBanner from "./HeroBanner";
 
 const HeroSection = () => {
     const [activeTab, setActiveTab] = useState("impact");
