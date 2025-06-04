@@ -6,19 +6,21 @@ import "slick-carousel/slick/slick-theme.css";
 const universities = [
     {
         id: 1,
-        name: "Allahabad University",
-        image: "https://prayagtourism.com/wp-content/uploads/2023/06/University-of-Allahabad.jpg",
-        location: "Prayagraj",
-        ranking: "1st",
-        fee: "Rs.50,000/year",
-        courses: ["Law", "Medicine", "Business"]
+        name: "UPES",
+        fee: "Rs.50000",
+        location: "Deharadun",
+        courses: [
+            "B.A.",
+            "B.Com.",
+            "M.A."
+        ],
+        image: "https://assets.telegraphindia.com/telegraph/2023/Jun/1687339661_pr-58.jpg"
     },
     {
         id: 2,
         name: "Amity University",
         image: "https://amity.edu/infocentre/images/higher1.jpg",
         location: "Noida",
-        ranking: "2nd",
         fee: "Rs. 48,000/year",
         courses: ["Engineering", "Computer Science", "Design"]
     },
@@ -27,7 +29,6 @@ const universities = [
         name: "Parul University",
         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAR0OZ1EQCoj6O9DXZUcyI87jhqFs8Hmy6Ng&s",
         location: "Mumbai",
-        ranking: "3rd",
         fee: "Rs.49,000/year",
         courses: ["AI", "Robotics", "Physics"]
     }
@@ -87,14 +88,6 @@ const UniversitySlider = () => {
                                         <div className="flex items-start gap-2">
                                             <span className="text-purple-600 font-medium">📍 Location:</span>
                                             <span>{uni.location}</span>
-                                        </div>
-                                        <div className="flex items-start gap-2">
-                                            <span className="text-purple-600 font-medium">🏆 Ranking:</span>
-                                            <span>{uni.ranking}</span>
-                                        </div>
-                                        <div className="flex items-start gap-2">
-                                            <span className="text-purple-600 font-medium">💰 Fee:</span>
-                                            <span>{uni.fee}</span>
                                         </div>
                                         <div className="flex flex-col sm:flex-row md:items-start gap-2">
                                             <span className="text-purple-600 font-medium whitespace-nowrap">🎓 Courses:</span>

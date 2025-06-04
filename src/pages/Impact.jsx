@@ -61,16 +61,32 @@ const Impact = () => {
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                    {stats.map((item, index) => (
-                        <div
-                            key={index}
-                            className="bg-purple-300 border-gray-200 rounded-2xl shadow-md px-2 py-6 flex flex-col items-center hover:shadow-lg transition-shadow"
-                        >
-                            <div className="text-4xl mb-4">{item.icon}</div>
-                            <h3 className="text-xl font-bold text-purple-800">{item.value}</h3>
-                            <p className="text-purple-800 font-semibold mt-1">{item.label}</p>
-                        </div>
-                    ))}
+                    {stats.map((item, index) => {
+                        const isClickable = item.label === "University Collab." || item.label === "Courses Offered";
+                        const linkHref = item.label === "University Collab."
+                            ? "/university"  // update with actual route
+                            : item.label === "Courses Offered"
+                                ? "/courseDetails"
+                                : "#";
+
+                        return (
+                            <div
+                                key={index}
+                                className="bg-purple-300 border-gray-200 rounded-2xl shadow-md px-2 py-6 flex flex-col items-center hover:shadow-lg transition-shadow"
+                            >
+                                <div className="text-4xl mb-4">{item.icon}</div>
+                                {isClickable ? (
+                                    <a href={linkHref} className="text-xl font-bold text-purple-800 hover:underline">
+                                        {item.value}
+                                    </a>
+                                ) : (
+                                    <h3 className="text-xl font-bold text-purple-800">{item.value}</h3>
+                                )}
+                                <p className="text-purple-800 font-semibold mt-1">{item.label}</p>
+                            </div>
+                        );
+                    })}
+
                 </div>
             </div>
 

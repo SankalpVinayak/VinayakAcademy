@@ -2,14 +2,21 @@ import { Star, Handshake, Users, Trophy, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import UniversitySlider from "./UniversitySlider";
+import { useNavigate } from "react-router-dom";
 
 const universityPartners = [
     "https://logowik.com/content/uploads/images/upes-university-of-petroleum-and-energy-studies1209.jpg",
-    "https://logowik.com/content/uploads/images/amity-university9126.jpg",
-    "https://www.ul.ie/sites/default/files/styles/max_content/public/global/8D7CB9C2-6D38-488E-AFE6-F2E85BB118F6.jpeg.webp?itok=BR2PYx_A",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7RxRBXIkHsIqqY6DidlQuvkGgJb96XHnBGg&s",
-    "https://static.theprint.in/wp-content/uploads/2022/07/Lovely_Professional_University_LPU2022071812113420220718123229.jpg",
-    "https://upload.wikimedia.org/wikipedia/hi/6/6a/Nalanda_University_Logo.png",
+    "https://upload.wikimedia.org/wikipedia/en/3/3d/Haridwar_University_logo.png",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtH2hWYAbD7HB8qyczgVRmfAKUd07oA2xGPw&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwDC93Azab2QicGTKSBMxOKyX2mNTvyuaQcw&s",
+    "https://svsu.ac.in/assets/imgs/svsu_logo.png",
+    "https://upload.wikimedia.org/wikipedia/commons/f/f1/Gyan_Vihar_Logo.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHsk5KTC2PYHi852BKUoxFEGJG2m6uHJ6e7w&s",
+    "https://seeklogo.com/images/A/asian-international-university-manipur-logo-4EBFC0A259-seeklogo.com.png",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSg3eG5TcI8tEofKgBSAXRl_wqFiEYDZN6GA&s",
+    "https://seeklogo.com/images/P/parul-university-logo-E549D59E4B-seeklogo.com.png",
+    "https://i.pinimg.com/736x/15/f9/0c/15f90c2a6d66896f71338be308e681b3.jpg",
+    "https://images.seeklogo.com/logo-png/34/2/lpu-sae-india-collegiate-club-logo-png_seeklogo-345773.png",
 ];
 
 
@@ -40,37 +47,8 @@ const features = [
     },
 ];
 
-const faqs = [
-    {
-        question: "What types of collaborations does Vinayak Academy offer?",
-        answer:
-            "We offer a wide range of academic partnerships including joint programs, research initiatives, faculty exchanges, and summer schools.",
-    },
-    {
-        question: "How can a university initiate collaboration with Vinayak Academy?",
-        answer:
-            "Interested universities can reach out through our official collaboration proposal form or contact our Global Relations team directly via email.",
-    },
-    {
-        question: "Are the collaborative programs open to all students?",
-        answer:
-            "Yes, most programs are open to eligible students across disciplines. Specific criteria may vary depending on the partner institution and program.",
-    },
-    {
-        question: "Is funding or scholarship support available for exchange programs?",
-        answer:
-            "Yes, several programs offer full or partial scholarships, travel grants, and funding support through our partners or internal merit-based schemes.",
-    },
-    {
-        question: "What is the typical duration of a collaborative program?",
-        answer:
-            "Program durations vary, ranging from 2-week workshops to full semester exchanges or dual-degree programs.",
-    },
-];
-
-
-
 const Collaboration = () => {
+    const navigate = useNavigate()
 
     const [openIndex, setOpenIndex] = useState(null);
 
@@ -159,6 +137,15 @@ const Collaboration = () => {
             </div>
 
             <UniversitySlider />
+            <div className="text-center -mt-8">
+                <button onClick={() => navigate('/university')}
+                    className="inline-block bg-purple-600 text-white cursor-pointer
+                    font-semibold text-center py-3 px-6 rounded-xl shadow-md hover:bg-purple-800 
+                    transition duration-300">
+                    🎓 See Full List
+                </button>
+            </div>
+
 
             {/* Spotlight Collaboration Section */}
             <section className="bg-white py-24 px-6 md:px-20">
@@ -220,55 +207,6 @@ const Collaboration = () => {
                     </motion.div>
                 </div>
             </section>
-
-            {/* FAQs */}
-            {/* <section className="bg-white py-24 px-6 md:px-20">
-                <div className="max-w-4xl mx-auto">
-                    <div className="text-center mb-12">
-                        <h2 className="text-4xl font-extrabold text-purple-800">
-                            Frequently Asked Questions
-                        </h2>
-                        <p className="text-gray-600 mt-4 text-lg max-w-xl mx-auto">
-                            Everything you need to know about how we collaborate with global universities.
-                        </p>
-                    </div>
-
-                    <div className="space-y-4">
-                        {faqs.map((faq, idx) => (
-                            <div
-                                key={idx}
-                                className="border border-gray-200 rounded-2xl shadow-sm overflow-hidden"
-                            >
-                                <button
-                                    onClick={() => toggleFAQ(idx)}
-                                    className="w-full flex justify-between items-center px-6 py-5 text-left text-gray-800 font-semibold hover:bg-purple-50 transition"
-                                >
-                                    <span>{faq.question}</span>
-                                    <ChevronDown
-                                        className={`w-5 h-5 text-purple-600 transform transition-transform duration-300 ${openIndex === idx ? "rotate-180" : ""
-                                            }`}
-                                    />
-                                </button>
-
-                                <AnimatePresence>
-                                    {openIndex === idx && (
-                                        <motion.div
-                                            key="content"
-                                            initial={{ height: 0, opacity: 0 }}
-                                            animate={{ height: "auto", opacity: 1 }}
-                                            exit={{ height: 0, opacity: 0 }}
-                                            transition={{ duration: 0.1 }}
-                                            className="px-6 pb-5 text-gray-600"
-                                        >
-                                            <p>{faq.answer}</p>
-                                        </motion.div>
-                                    )}
-                                </AnimatePresence>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section> */}
         </section>
 
     );

@@ -20,9 +20,15 @@ const Footer = () => {
         <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
 
           {/* Logo Section */}
-          <div className="flex flex-col gap-4">
-            <img src={Logo} alt="Vinayak Academy Logo" className="h-16 md:h-20" />
-            <p className="text-sm text-gray-700 leading-relaxed">
+          <div className="flex flex-col items-start gap-3">
+            <Link to="/" className="block">
+              <img
+                src={Logo}
+                alt="Vinayak Academy Logo"
+                className="h-10 md:h-10 object-contain"
+              />
+            </Link>
+            <p className="text-sm text-gray-700 leading-relaxed max-w-xs">
               Empowering students across India to achieve their dreams.
             </p>
           </div>

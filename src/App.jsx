@@ -11,6 +11,8 @@ import Counselling from './pages/Counselling'
 import Collaboration from './pages/Collaboration'
 import CollegeList from './pages/CollegeList'
 import UniversityComparison from './pages/UniversitiyComparison'
+import Universities from './pages/Universities'
+import UniversityPage from './pages/UniversityPage'
 
 function App() {
 
@@ -23,11 +25,11 @@ function App() {
           <Route path='/courseDetails' element={<CourseDetails />} />
           <Route path='/contactUs' element={<ContactUs />} />
           <Route path='/aboutUs' element={<About />} />
-          <Route path='/achievements' element={<Achievements />} />
-          <Route path='/enroll' element={<Enroll />} />
           <Route path='/counselling' element={<Counselling />} />
           <Route path='/collaboration' element={<Collaboration />} />
-          <Route path='/university' element={<UniversityComparison />} />
+          <Route path='/universityComp' element={<UniversityComparison />} />
+          <Route path='/university' element={<Universities />} />
+          <Route path="/university/:id" element={<UniversityPage />} />
           <Route path="/colleges/:courseName" element={<CollegeList />} />
         </Routes>
         <Footer />

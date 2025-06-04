@@ -27,7 +27,7 @@ const features = [
 const WhyUs = () => {
     return (
         <section className="bg-white py-24 px-6 md:px-20 -mt-20">
-            <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div className="max-w-7xl mx-auto grid xl:grid-cols-2 gap-16 items-center">
                 {/* Left Section */}
                 <motion.div
                     initial={{ opacity: 0, x: -60 }}
@@ -44,7 +44,7 @@ const WhyUs = () => {
                     </p>
                     <div className="space-y-4">
                         {[
-                            "One-on-One Career Mapping",
+                            "1-on-1 Career Mapping",
                             "Support for All Streams & Grades",
                             "Results-Oriented Planning",
                             "Support Beyond Counseling",
@@ -70,11 +70,14 @@ const WhyUs = () => {
                             className="bg-purple-200 backdrop-blur-lg rounded-2xl p-6 shadow-lg border 
                             border-purple-100 hover:shadow-xl transition"
                         >
-                            <div className="text-4xl mb-3">{item.icon}</div>
-                            <h4 className="text-xl font-semibold text-purple-800 mb-2">
-                                {item.title}
-                            </h4>
+                            <div className="flex items-center gap-2 mb-2">
+                                <div className="text-3xl text-purple-800">{item.icon}</div>
+                                <h4 className="text-lg font-semibold text-purple-800">
+                                    {item.title}
+                                </h4>
+                            </div>
                             <p className="text-gray-600 text-sm">{item.desc}</p>
+
                         </div>
                     ))}
                 </motion.div>

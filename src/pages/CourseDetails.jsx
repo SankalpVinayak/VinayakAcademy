@@ -20,7 +20,7 @@ const CourseCard = ({ title, fee, desc, duration, careerPath, summary }) => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
             className="bg-white rounded-xl shadow-lg transition-all duration-300 w-60 md:w-64 lg:w-72 flex 
-            flex-col justify-between p-4 border border-purple-100 relative h-[300px] overflow-hidden"
+            flex-col justify-between p-4 border border-purple-100 relative h-[280px] overflow-hidden"
         >
             <div className="absolute top-2 right-2 bg-purple-100 text-purple-700 text-xs px-2 py-1 
             rounded-full font-medium shadow-sm">
@@ -29,11 +29,6 @@ const CourseCard = ({ title, fee, desc, duration, careerPath, summary }) => {
 
             <div className="flex-1 flex flex-col overflow-hidden">
                 <h3 className="text-lg font-semibold text-purple-700 mb-2">{title}</h3>
-
-                <div className="text-sm text-gray-600 mb-1">
-                    <span className="font-medium text-gray-700">Fee:</span>{' '}
-                    <span className="text-purple-500 font-semibold">{fee}</span>
-                </div>
 
                 <div className="text-sm text-gray-600 mb-1">
                     <span className="font-medium text-gray-700">Duration:</span> {duration}
@@ -200,7 +195,7 @@ const CourseDetails = () => {
             {filteredData ? (
                 Object.keys(filteredData).length > 0 ? (
                     <>
-                        {filteredData.schooling && <CourseSection title="Foundation Level Courses" data={filteredData.schooling} />}
+                        {filteredData.schooling && <CourseSection title="Academic Level Courses" data={filteredData.schooling} />}
                         {filteredData.undergraduate && <CourseSection title="Undergraduate Courses" data={filteredData.undergraduate} />}
                         {filteredData.postgraduate && <CourseSection title="Postgraduate Courses" data={filteredData.postgraduate} />}
                         {filteredData.diploma && <CourseSection title="Diploma Courses" data={filteredData.diploma} />}
@@ -212,7 +207,7 @@ const CourseDetails = () => {
                 )
             ) : (
                 <>
-                    <CourseSection title="Foundation Level Courses" data={courseData.schooling} />
+                    <CourseSection title="Academic Level Courses" data={courseData.schooling} />
                     <CourseSection title="Undergraduate Courses" data={courseData.undergraduate} />
                     <CourseSection title="Postgraduate Courses" data={courseData.postgraduate} />
                     <CourseSection title="Diploma Courses" data={courseData.diploma} />

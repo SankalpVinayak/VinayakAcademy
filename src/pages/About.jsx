@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Image1 from '../assets/AboutUs1.svg';
+import Image1 from '../assets/About Us 4.jpg';
 import Image2 from '../assets/AboutUs2.svg';
 import Image3 from '../assets/AboutUs3.svg';
 import { motion } from 'framer-motion';

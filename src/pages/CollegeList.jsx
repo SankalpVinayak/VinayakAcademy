@@ -1,59 +1,89 @@
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
 
 const CollegeList = () => {
     const { courseName } = useParams();
     const [colleges, setColleges] = useState([]);
 
     useEffect(() => {
-        // Scroll to top when component mounts
         window.scrollTo({ top: 0 });
     }, []);
 
     useEffect(() => {
-        fetch('/Universities.json')  // Adjust path if needed
+        fetch('/Universities.json')
             .then(res => res.json())
             .then(data => {
-                const filtered = data.filter(college =>
-                    college.courses.includes(decodeURIComponent(courseName))
-                );
+                const decodedCourse = decodeURIComponent(courseName).toLowerCase();
+
+                const filtered = data.filter(college => {
+                    return college.courses.some(course => {
+                        if (course.name.toLowerCase() === "diploma") {
+                            // Match against any subject in slash-separated list
+                            const subjects = course.subject.split('/').map(s => s.trim().toLowerCase());
+                            return subjects.includes(decodedCourse);
+                        } else {
+                            // Default match by course name
+                            return course.name.toLowerCase() === decodedCourse;
+                        }
+                    });
+                });
+
                 setColleges(filtered);
             });
     }, [courseName]);
-
     return (
-        <div className="bg-gradient-to-br p-8 from-purple-50 to-gray-100 min-h-screen">
-            <h2 className="text-4xl font-extrabold text-center text-purple-800 mb-12 tracking-tight">
-                Colleges Offering <span className="text-gray-800">"{courseName}"</span>
-            </h2>
+        <div className="p-6 space-y-6">
+            <h2 className="text-purple-800 text-2xl font-bold">Colleges Offering "{decodeURIComponent(courseName)}"</h2>
+            {colleges.map(college => (
+                <div
+                    key={college.id}
+                    className="bg-white rounded-xl shadow-md p-4 flex flex-col md:flex-row gap-6 items-center"
+                >
+                    <img
+                        src={college.logoImage}
+                        alt={`${college.name} Logo`}
+                        className="w-24 h-24 object-contain"
+                    />
+                    <div className="flex-1">
+                        <h3 className="text-xl font-semibold text-purple-800">{college.name}</h3>
+                        <p className="text-gray-600">{college.location}</p>
+                        <div className="mt-2">
+                            <h4 className="font-semibold text-purple-800">Courses:</h4>
+                            <ul className="list-disc list-inside">
+                                {college.courses
+                                    .filter(course => {
+                                        const decodedCourse = decodeURIComponent(courseName).toLowerCase();
 
-            <div className="flex flex-wrap flex-grow justify-center gap-10 max-w-7xl mx-auto">
-                {colleges.map((college, idx) => (
-                    <div
-                        key={idx}
-                        className="flex flex-col bg-white rounded-3xl w-full sm:w-[48%] lg:w-[30%] overflow-hidden shadow-xl transform transition duration-300 hover:scale-[1.02] hover:shadow-2xl"
-                    >
-                        <div className="h-48 w-full overflow-hidden">
-                            <img
-                                src={college.image}
-                                alt={college.name}
-                                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                            />
-                        </div>
-                        <div className="p-6 flex flex-col justify-between flex-grow">
-                            <h3 className="text-2xl font-bold text-purple-700 mb-2">
-                                {college.name}
-                            </h3>
-                            <p className="text-sm text-gray-600 leading-relaxed flex-grow">
-                                <span className="font-medium text-gray-800">Courses:</span> {college.courses.join(', ')}
-                            </p>
+                                        if (course.name.toLowerCase() === "diploma") {
+                                            // Handle special case for Diploma — check subject(s)
+                                            const subjects = course.subject.split('/').map(s => s.trim().toLowerCase());
+                                            return subjects.includes(decodedCourse);
+                                        }
+
+                                        // Regular case: match course name
+                                        return course.name.toLowerCase() === decodedCourse;
+                                    })
+                                    .map((course, index) => (
+                                        <li key={index} className='text-gray-600'>
+                                            Subject: {course.subject} | Duration: {course.duration} years | Fee: {course.fee}
+                                        </li>
+                                    ))}
+
+                            </ul>
                         </div>
                     </div>
-                ))}
-            </div>
+                    <img
+                        src={college.image}
+                        alt={`${college.name} Campus`}
+                        className="w-40 h-28 object-cover rounded-md"
+                    />
+                </div>
+            ))}
+            {colleges.length === 0 && (
+                <p className="text-red-500">No colleges found offering "{decodeURIComponent(courseName)}"</p>
+            )}
         </div>
-
     );
 };
 
-export default CollegeList
+export default CollegeList;
