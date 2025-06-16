@@ -14,20 +14,30 @@ const CollegeList = () => {
             .then(res => res.json())
             .then(data => {
                 const decodedCourse = decodeURIComponent(courseName).toLowerCase();
-
+                // console.log("decodedCourse-->", decodedCourse)
                 const filtered = data.filter(college => {
+                    // console.log('college---->', college)
                     return college.courses.some(course => {
                         if (course.name.toLowerCase() === "diploma") {
+                            // console.log('course---->', course)
+
                             // Match against any subject in slash-separated list
                             const subjects = course.subject.split('/').map(s => s.trim().toLowerCase());
-                            return subjects.includes(decodedCourse);
+                            console.log("subjects-->", subjects)
+
+                            const hasEngineeringSubject = subjects.some(subject =>
+                                subject.toLowerCase().includes(decodedCourse)
+                            );
+
+                            console.log(hasEngineeringSubject); // ✅ true
+                            return hasEngineeringSubject
                         } else {
                             // Default match by course name
                             return course.name.toLowerCase() === decodedCourse;
                         }
                     });
                 });
-
+                console.log('filtered--->', filtered)
                 setColleges(filtered);
             });
     }, [courseName]);
@@ -48,23 +58,24 @@ const CollegeList = () => {
                         <h3 className="text-xl font-semibold text-purple-800">{college.name}</h3>
                         <p className="text-gray-600">{college.location}</p>
                         <div className="mt-2">
-                            <h4 className="font-semibold text-purple-800">Courses:</h4>
+                            <h4 className="font-semibold text-purple-800">Course:</h4>
                             <ul className="list-disc list-inside">
                                 {college.courses
                                     .filter(course => {
                                         const decodedCourse = decodeURIComponent(courseName).toLowerCase();
 
                                         if (course.name.toLowerCase() === "diploma") {
-                                            // Handle special case for Diploma — check subject(s)
                                             const subjects = course.subject.split('/').map(s => s.trim().toLowerCase());
-                                            return subjects.includes(decodedCourse);
+
+                                            return subjects.includes(decodedCourse) ||
+                                                (decodedCourse.includes("engineering") &&
+                                                    subjects.some(subject => subject.includes("engineering")));
                                         }
 
-                                        // Regular case: match course name
                                         return course.name.toLowerCase() === decodedCourse;
                                     })
                                     .map((course, index) => (
-                                        <li key={index} className='text-gray-600'>
+                                        <li key={index} className="text-gray-600">
                                             Subject: {course.subject} | Duration: {course.duration} years | Fee: {course.fee}
                                         </li>
                                     ))}

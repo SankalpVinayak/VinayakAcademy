@@ -1,5 +1,11 @@
 import Slider from "react-slick";
 import { BadgeCheck } from "lucide-react";
+import student1 from "../assets/Student1.jpg"
+import student2 from "../assets/Student2.avif"
+import student3 from "../assets/Student3.webp"
+import student4 from "../assets/Student4.jpg"
+import student5 from "../assets/Student5.jpg"
+import student6 from "../assets/Student6.avif"
 
 const successData = [
     {
@@ -7,8 +13,7 @@ const successData = [
         quote:
             "I was confused about my future after 12th. Thanks to Vinayak Academy, I not only got into my dream college but also discovered my true interests.",
         outcome: "Admitted to Delhi University – Psychology (Hons)",
-        image:
-            "https://wpvip.edutopia.org/wp-content/uploads/2022/10/shutterstock_1958383675-crop.jpg",
+        image: student1,
         label: "College Success",
     },
     {
@@ -16,8 +21,7 @@ const successData = [
         quote:
             "The structured coaching and personal feedback helped me crack JEE Advanced with a top rank. Their mentors are genuinely invested.",
         outcome: "IIT Kanpur – Electrical Engineering",
-        image:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdF93my5cnG_tbvUlY7iXuoHv-p6fbJEL6JA&s",
+        image: student2,
         label: "Engineering Excellence",
     },
     {
@@ -25,8 +29,7 @@ const successData = [
         quote:
             "Switching from Science to Design was a big leap, but their career counselling gave me clarity and direction.",
         outcome: "Admitted to NIFT – Fashion Communication",
-        image:
-            "https://jecrcuniversity.edu.in/wp-content/uploads/2023/02/7-THINGS-TO-MAKE-STUDENTS-LIFE-EASIER.jpg.webp",
+        image: student3,
         label: "Career Shift",
     },
     {
@@ -34,8 +37,7 @@ const successData = [
         quote:
             "Vinayak’s mentorship helped me balance school and CUET prep, and I cracked it with flying colours.",
         outcome: "CUET Top Ranker – B.A. Political Science, BHU",
-        image:
-            "https://res.cloudinary.com/highereducation/images/f_auto,q_auto/v1695822409/ComputerScience.org/student-studying-with-help-from-AI-tools/student-studying-with-help-from-AI-tools.jpg?_i=AA",
+        image: student4,
         label: "CUET Cracker",
     },
     {
@@ -43,8 +45,7 @@ const successData = [
         quote:
             "The one-on-one guidance and aptitude mapping helped me discover a passion for psychology.",
         outcome: "Selected at Christ University – B.Sc Psychology",
-        image:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Xm6Q5rJHYZZ-tjTlurFnARKxou22fzewkA&s",
+        image: student5,
         label: "Career Discovery",
     },
     {
@@ -52,8 +53,7 @@ const successData = [
         quote:
             "Thanks to Vinayak Academy, I overcame self-doubt and got into my dream engineering college.",
         outcome: "VIT Vellore – Computer Science",
-        image:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSVdgzCZC_WMDgbbW_X4n9Par3grYKJAyZjw&s",
+        image: student6,
         label: "Overcoming Doubts",
     },
 ];
@@ -81,7 +81,7 @@ const SuccessStories = () => {
                 <h2 className="text-4xl md:text-5xl font-extrabold text-[#B71D8D] text-center mb-6 shadow:md">
                     Inspiring Journeys. Real Results.
                 </h2>
-                <p className="text-lg italic md:text-xl text-gray-600 text-center mb-10 max-w-3xl mx-auto">
+                <p className="text-lg italic md:text-xl text-center mb-10 max-w-3xl mx-auto">
                     From career clarity to top university selections, our students have transformed uncertainty into achievement.
                 </p>
 

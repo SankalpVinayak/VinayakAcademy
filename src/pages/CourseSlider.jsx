@@ -33,7 +33,7 @@ const CourseSlider = ({ courses }) => {
         <Slider {...settings}>
             {courses.map((course, index) => (
                 <div key={index} className="px-4">
-                    <div className="bg-[#3C004D] text-[#FAFFD8] rounded-xl overflow-hidden flex flex-col 
+                    <div className="bg-purple-900 text-[#FAFFD8] rounded-xl overflow-hidden flex flex-col 
                     justify-between h-[400px] shadow-md cursor-pointer">
 
                         <div className="h-[200px] overflow-hidden">

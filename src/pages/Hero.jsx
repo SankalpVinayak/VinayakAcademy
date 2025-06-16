@@ -31,7 +31,7 @@ const HeroSection = () => {
                     <p className="text-sm tracking-wider text-[#B71D8D] italic font-semibold mt-3">
                         *START YOUR JOURNEY.
                     </p>
-                    <a href="#" className="text-blue-600 underline">
+                    <a href="/counselling" className="text-blue-600 underline">
                         <button className="bg-purple-500 text-white mt-3 px-6 py-3 rounded-xl shadow-md hover:bg-violet-800 transition cursor-pointer w-full sm:w-auto">
                             Enroll Now
                         </button>
@@ -45,7 +45,7 @@ const HeroSection = () => {
             </div>
 
             {/* Tabs */}
-            <div className="flex justify-center border-b mb-6 ">
+            {/* <div className="flex justify-center border-b mb-6 ">
                 <button
                     onClick={() => setActiveTab("impact")}
                     className={`px-6 py-2 font-medium transition-all cursor-pointer ${activeTab === "impact"
@@ -64,14 +64,17 @@ const HeroSection = () => {
                 >
                     Explore Our Courses
                 </button>
-            </div>
+            </div> */}
 
             {/* Feature Sec */}
-            {activeTab === "impact" ? (
+            {/* {activeTab === "impact" ? (
                 <Impact />
             ) : (
                 <Courses />
-            )}
+            )} */}
+
+            <Impact />
+            <Courses />
 
             <Values />
             <SuccessStories />

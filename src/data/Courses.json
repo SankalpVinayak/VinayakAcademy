@@ -51,6 +51,14 @@
             "desc": "Bachelor of Science caters to students interested in natural sciences and research. It emphasizes lab work and analytical reasoning in fields like biology, chemistry, and mathematics."
         },
         {
+            "title": "B.Tech.",
+            "fee": "₹1,25,000 – ₹1,95,000",
+            "duration": "4 Years",
+            "summary": "Hands-on engineering education for building future innovations.",
+            "careerPath": "Software Developer, Civil Engineer, Mechanical Engineer, System Analyst",
+            "desc": "Bachelor of Technology is a rigorous undergraduate program that equips students with strong technical knowledge and problem-solving skills in fields such as computer science, mechanical, civil, and electronics engineering. It includes real-world projects, internships, and modern lab facilities to prepare students for industrial roles and future innovations."
+        },
+        {
             "title": "B.C.A.",
             "fee": "₹90,900 – ₹1,14,000",
             "duration": "3 Years",
@@ -65,6 +73,14 @@
             "summary": "Learn library science and information management.",
             "careerPath": "Academic Libraries, Digital Archiving, Cataloguing",
             "desc": "The Bachelor of Library Science trains students in organizing, managing, and disseminating information using digital tools and classification systems."
+        },
+        {
+            "title": "L.L.B.",
+            "fee": "₹65,000 – ₹95,000",
+            "duration": "3 Years",
+            "summary": "A professional degree for aspiring legal practitioners.",
+            "careerPath": "Lawyer, Legal Advisor, Public Prosecutor, Corporate Counsel",
+            "desc": "The L.L.B. program offers foundational and advanced legal knowledge, covering areas like constitutional law, criminal justice, and corporate law. It prepares students for advocacy, judiciary exams, and legal practice."
         }
     ],
     "postgraduate": [
@@ -101,6 +117,14 @@
             "desc": "Master of Science is ideal for research-driven students focusing on innovation, analysis, and specialized lab work."
         },
         {
+            "title": "M.Tech.",
+            "fee": "₹1,10,000 – ₹1,60,000",
+            "duration": "2 Years",
+            "summary": "Advanced specialization in engineering and technology domains.",
+            "careerPath": "Project Lead, Research Scientist, Consultant, Academician",
+            "desc": "Master of Technology is a postgraduate program focusing on in-depth expertise and innovation in core engineering domains. It builds on foundational B.Tech. knowledge and includes research work, advanced technical electives, and specialization tracks tailored for leadership roles in R&D, industry, and academia."
+        },
+        {
             "title": "M.C.A.",
             "fee": "₹90,900 – ₹1,14,000",
             "duration": "2 Years",
@@ -115,6 +139,14 @@
             "summary": "Manage digital and traditional knowledge systems.",
             "careerPath": "Library Management, Information Services",
             "desc": "Master of Library Science focuses on digital information management, data archiving, and modern library tools."
+        },
+        {
+            "title": "M.H.M.",
+            "fee": "₹70,000 – ₹1,10,000",
+            "duration": "2 Years",
+            "summary": "Advanced training for leadership roles in the hospitality industry.",
+            "careerPath": "Hotel Manager, Hospitality Consultant, Event Planner, F&B Director",
+            "desc": "M.H.M. equips graduates with skills in hotel operations, hospitality marketing, and customer service management. The program is tailored for future leaders in the hotel and tourism industry."
         }
     ],
     "diploma": [
@@ -157,6 +189,54 @@
             "summary": "Train in therapeutic communication and mental health.",
             "careerPath": "Counsellor, School Psychologist, Private Practice",
             "desc": "Diploma in Counselling Psychology includes therapeutic techniques, client interaction, and supervised practice."
+        },
+        {
+            "title": "Library Science",
+            "fee": "₹25,000 – ₹40,000",
+            "duration": "1 Year",
+            "summary": "Organize, manage, and modernize information systems and libraries.",
+            "careerPath": "Librarian, Archivist, Cataloguer, Digital Resource Manager",
+            "desc": "Library Science emphasizes the acquisition, classification, and digital management of information. The course prepares students for roles in academic, public, and digital libraries using modern cataloging systems."
+        },
+        {
+            "title": "Early Childhood Care & Education",
+            "fee": "₹20,000 – ₹35,000",
+            "duration": "1 Year",
+            "summary": "Train to nurture and educate young minds during formative years.",
+            "careerPath": "Pre-School Teacher, Daycare Manager, Childcare Specialist",
+            "desc": "This course equips learners with skills in child psychology, learning activities, and early childhood health and development. It’s ideal for those passionate about guiding children during their crucial early years."
+        },
+        {
+            "title": "Computer Application",
+            "fee": "₹40,000 – ₹85,000",
+            "duration": "1 Year",
+            "summary": "Master essential computing skills for a tech-driven career.",
+            "careerPath": "Software Developer, IT Support, Web Designer, System Analyst",
+            "desc": "Focused on software development, database management, and digital tools, this course builds strong foundations in IT. Ideal for students aiming for careers in tech and digital services."
+        },
+        {
+            "title": "Business Administration",
+            "fee": "₹45,000 – ₹75,000",
+            "duration": "1 Year",
+            "summary": "Develop leadership and management skills for the corporate world.",
+            "careerPath": "Business Analyst, Marketing Manager, HR Executive, Entrepreneur",
+            "desc": "BBA is an undergraduate program covering finance, marketing, HR, and operations. It offers practical exposure to corporate dynamics, preparing students for entry-level management roles or entrepreneurship."
+        },
+        {
+            "title": "Guidance & Counseling",
+            "fee": "₹30,000 – ₹50,000",
+            "duration": "1 Year",
+            "summary": "Train to guide individuals through personal, educational, and career challenges.",
+            "careerPath": "School Counselor, Career Coach, Mental Health Counselor",
+            "desc": "This program covers psychological assessment, emotional support strategies, and communication techniques, preparing students for meaningful careers in personal and academic guidance."
+        },
+        {
+            "title": "Engineering",
+            "fee": "₹1,20,000 – ₹2,00,000",
+            "duration": "1 Year",
+            "summary": "Innovative problem-solving across multiple technical disciplines.",
+            "careerPath": "Software Engineer, Civil Engineer, Mechanical Engineer, Systems Architect",
+            "desc": "Engineering programs span various fields such as Computer Science, Mechanical, Civil, and Electronics. With a focus on design thinking and real-world applications, students graduate with the ability to innovate and lead."
         }
     ]
 }

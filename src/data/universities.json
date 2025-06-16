@@ -4,7 +4,7 @@
         "name": "UPES",
         "fee": "Rs.50000",
         "location": "Deharadun",
-        "logoImage": "https://logowik.com/content/uploads/images/upes-university-of-petroleum-and-energy-studies1209.jpg",
+        "logoImage": "/images/universities/UpesLogo.jpg",
         "courses": [
             {
                 "name": "B.A.",
@@ -25,14 +25,14 @@
                 "duration": 3
             }
         ],
-        "image": "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29sbGVnZSUyMGNhbXB1c3xlbnwwfHwwfHx8MA%3D%3D"
+        "image": "/images/universities/Upes.webp"
     },
     {
         "id": 2,
         "name": "Haridwar University",
         "fee": "Rs.60000",
         "location": "Haridwar",
-        "logoImage": "https://upload.wikimedia.org/wikipedia/en/3/3d/Haridwar_University_logo.png",
+        "logoImage": "/images/universities/HULogo.png",
         "courses": [
             {
                 "name": "B.A.",
@@ -53,14 +53,14 @@
                 "duration": 3
             }
         ],
-        "image": "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29sbGVnZSUyMGNhbXB1c3xlbnwwfHwwfHx8MA%3D%3D"
+        "image": "/images/universities/HaridwarUniversity.jpg"
     },
     {
         "id": 3,
         "name": "Sage University",
         "fee": "Rs.60000",
         "location": "Indore",
-        "logoImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtH2hWYAbD7HB8qyczgVRmfAKUd07oA2xGPw&s",
+        "logoImage": "/images/universities/SageLogo.jpeg",
         "courses": [
             {
                 "name": "B.A.",
@@ -81,14 +81,14 @@
                 "duration": 3
             }
         ],
-        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+        "image": "/images/universities/SageUniversity.webp"
     },
     {
         "id": 4,
         "name": "Mangalayatan University",
         "fee": "Rs.70000",
         "location": "Aligarh",
-        "logoImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwDC93Azab2QicGTKSBMxOKyX2mNTvyuaQcw&s",
+        "logoImage": "/images/universities/MULogo.jpeg",
         "courses": [
             {
                 "name": "B.A.",
@@ -169,14 +169,14 @@
                 "duration": 1
             }
         ],
-        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+        "image": "/images/universities/MU.webp"
     },
     {
         "id": 5,
         "name": "Swami Vivekanand Subharti University",
         "fee": "Rs.60000",
         "location": "Meerut",
-        "logoImage": "https://svsu.ac.in/assets/imgs/svsu_logo.png",
+        "logoImage": "/images/universities/SVSULogo.png",
         "courses": [
             {
                 "name": "B.A.",
@@ -251,14 +251,14 @@
                 "duration": 2
             }
         ],
-        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+        "image": "/images/universities/SVSU.webp"
     },
     {
         "id": 6,
         "name": "Suresh Gyan Vihar University",
         "fee": "Rs.60000",
         "location": "Jaipur",
-        "logoImage": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Gyan_Vihar_Logo.jpg",
+        "logoImage": "/images/universities/SGVULogo.jpg",
         "courses": [
             {
                 "name": "B.A.",
@@ -279,14 +279,14 @@
                 "duration": 3
             }
         ],
-        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+        "image": "/images/universities/SGVU.jpg"
     },
     {
         "id": 7,
         "name": "Guru Kashi University",
         "fee": "Rs.60000",
         "location": "Talawabdi Sabo, Punjab",
-        "logoImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHsk5KTC2PYHi852BKUoxFEGJG2m6uHJ6e7w&s",
+        "logoImage": "/images/universities/GKULogo.jpeg",
         "courses": [
             {
                 "name": "BA",
@@ -361,14 +361,14 @@
                 "duration": 1
             }
         ],
-        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+        "image": "/images/universities/GKU.jpeg"
     },
     {
         "id": 8,
         "name": "Asian International University",
         "fee": "Rs.60000",
         "location": "Imphal, Manipur",
-        "logoImage": "https://seeklogo.com/images/A/asian-international-university-manipur-logo-4EBFC0A259-seeklogo.com.png",
+        "logoImage": "/images/universities/AIULogo.png",
         "courses": [
             {
                 "name": "MHM",
@@ -407,14 +407,14 @@
                 "duration": 3
             }
         ],
-        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+        "image": "/images/universities/AIU.jpeg"
     },
     {
         "id": 9,
         "name": "Board of Open Schooling and Skill Education",
         "fee": "Rs.60000",
         "location": "Online,Sikkim",
-        "logoImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSg3eG5TcI8tEofKgBSAXRl_wqFiEYDZN6GA&s",
+        "logoImage": "/images/universities/BOSSE.jpeg",
         "courses": [
             {
                 "name": "SECONDARY",
@@ -429,14 +429,14 @@
                 "duration": 1
             }
         ],
-        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+        "image": "/images/universities/BOSSE.jpeg"
     },
     {
         "id": 10,
         "name": "Parul University",
         "fee": "Rs.60000",
         "location": "Vadodra",
-        "logoImage": "https://seeklogo.com/images/P/parul-university-logo-E549D59E4B-seeklogo.com.png",
+        "logoImage": "/images/universities/PULogo.png",
         "courses": [
             {
                 "name": "B.A.",
@@ -457,14 +457,14 @@
                 "duration": 3
             }
         ],
-        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+        "image": "/images/universities/ParulUniversity.jpeg"
     },
     {
         "id": 11,
         "name": "Amity University",
         "fee": "Rs.100000",
         "location": "Noida, Lucknow",
-        "logoImage": "https://i.pinimg.com/736x/15/f9/0c/15f90c2a6d66896f71338be308e681b3.jpg",
+        "logoImage": "/images/universities/AmityLogo.jpg",
         "courses": [
             {
                 "name": "B.A.",
@@ -485,14 +485,14 @@
                 "duration": 3
             }
         ],
-        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+        "image": "/images/universities/Amity.jpg"
     },
     {
         "id": 12,
         "name": "Loverly Professional University",
         "fee": "Rs.60000",
         "location": "Phagwara, Punjab",
-        "logoImage": "https://images.seeklogo.com/logo-png/34/2/lpu-sae-india-collegiate-club-logo-png_seeklogo-345773.png",
+        "logoImage": "/images/universities/LPULogo.png",
         "courses": [
             {
                 "name": "B.A.",
@@ -513,6 +513,34 @@
                 "duration": 3
             }
         ],
-        "image": "https://www.cnu.org/sites/default/files/styles/public_square_feature_image/public/BostonCollege1.jpg?itok=iKc35HST"
+        "image": "/images/universities/LPU.jpg"
+    },
+    {
+        "id": 13,
+        "name": "Chandigarh University",
+        "fee": "Rs.100000",
+        "location": "Chandigarh",
+        "logoImage": "/images/universities/CULogo.png",
+        "courses": [
+            {
+                "name": "B.A.",
+                "fee": "Rs. 40,000",
+                "subject": "GENERAL",
+                "duration": 3
+            },
+            {
+                "name": "B.A.",
+                "fee": "Rs. 56,000",
+                "subject": "JMC",
+                "duration": 3
+            },
+            {
+                "name": "B.Com.",
+                "fee": "Rs. 44,500",
+                "subject": "GENERAL",
+                "duration": 3
+            }
+        ],
+        "image": "/images/universities/ChandigarhUniversity.jpg"
     }
 ]
