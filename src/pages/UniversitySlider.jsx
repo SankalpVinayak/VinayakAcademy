@@ -2,6 +2,8 @@ import Slider from "react-slick";
 import { motion } from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import UPES from "../assets/UPES2.jpg"
+import AMITY from "../assets/AMITY2.jpg"
 
 const universities = [
     {
@@ -14,12 +16,12 @@ const universities = [
             "B.Com.",
             "M.A."
         ],
-        image: "https://assets.telegraphindia.com/telegraph/2023/Jun/1687339661_pr-58.jpg"
+        image: UPES
     },
     {
         id: 2,
         name: "Amity University",
-        image: "https://amity.edu/infocentre/images/higher1.jpg",
+        image: AMITY,
         location: "Noida",
         fee: "Rs. 48,000/year",
         courses: ["Engineering", "Computer Science", "Design"]
@@ -27,7 +29,7 @@ const universities = [
     {
         id: 3,
         name: "Parul University",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAR0OZ1EQCoj6O9DXZUcyI87jhqFs8Hmy6Ng&s",
+        image: "/images/universities/ParulUniversity.jpeg",
         location: "Mumbai",
         fee: "Rs.49,000/year",
         courses: ["AI", "Robotics", "Physics"]

@@ -3,20 +3,22 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import UniversitySlider from "./UniversitySlider";
 import { useNavigate } from "react-router-dom";
+import BackToTopButton from "./BackToTopButton";
 
 const universityPartners = [
-    "https://logowik.com/content/uploads/images/upes-university-of-petroleum-and-energy-studies1209.jpg",
-    "https://upload.wikimedia.org/wikipedia/en/3/3d/Haridwar_University_logo.png",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtH2hWYAbD7HB8qyczgVRmfAKUd07oA2xGPw&s",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwDC93Azab2QicGTKSBMxOKyX2mNTvyuaQcw&s",
-    "https://svsu.ac.in/assets/imgs/svsu_logo.png",
-    "https://upload.wikimedia.org/wikipedia/commons/f/f1/Gyan_Vihar_Logo.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHsk5KTC2PYHi852BKUoxFEGJG2m6uHJ6e7w&s",
-    "https://seeklogo.com/images/A/asian-international-university-manipur-logo-4EBFC0A259-seeklogo.com.png",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSg3eG5TcI8tEofKgBSAXRl_wqFiEYDZN6GA&s",
-    "https://seeklogo.com/images/P/parul-university-logo-E549D59E4B-seeklogo.com.png",
-    "https://i.pinimg.com/736x/15/f9/0c/15f90c2a6d66896f71338be308e681b3.jpg",
-    "https://images.seeklogo.com/logo-png/34/2/lpu-sae-india-collegiate-club-logo-png_seeklogo-345773.png",
+    "/images/universities/UpesLogo.jpg",
+    "/images/universities/HULogo.png",
+    "/images/universities/SageLogo.jpeg",
+    "/images/universities/MULogo.jpeg",
+    "/images/universities/LPULogo.png",
+    "/images/universities/SVSULogo.png",
+    "/images/universities/SGVULogo.jpg",
+    "/images/universities/GKULogo.jpeg",
+    "/images/universities/AIULogo.png",
+    "/images/universities/BOSSE.jpeg",
+    "/images/universities/PULogo.png",
+    "/images/universities/AmityLogo.jpg",
+    "/images/universities/CULogo.png"
 ];
 
 
@@ -62,12 +64,13 @@ const Collaboration = () => {
             <div className="relative h-[40vh] bg-cover bg-center" style={{ backgroundImage: "url('/images/university-bg.jpg')" }}>
                 <div className="absolute inset-0 bg-purple-400 flex items-center justify-center">
                     <div className="text-center px-6">
-                        <h1 className="text-white text-4xl md:text-6xl font-extrabold mb-4">
-                            Global Academic Collaborations
+                        <h1 className="text-white text-4xl md:text-5xl font-extrabold mb-4">
+                            Strategic Academic Partnerships in India
                         </h1>
                         <p className="text-white text-lg md:text-xl max-w-2xl mx-auto">
-                            At Vinayak Academy, we proudly partner with renowned institutions worldwide to offer our students the best educational exposure and opportunities.
+                            Vinayak Academy partners with leading Indian universities and institutions to deliver high-impact academic programs. These collaborations ensure our students gain access to quality education, industry-relevant skills, and structured pathways to professional success.
                         </p>
+
                     </div>
                 </div>
             </div>
@@ -129,12 +132,15 @@ const Collaboration = () => {
             {/* Testimonial */}
             <div className="bg-white py-16 px-6 md:px-20">
                 <div className="max-w-4xl mx-auto text-center">
-                    <p className="text-xl italic text-gray-600 mb-4">
-                        “Vinayak Academy’s students consistently demonstrate outstanding preparedness and dedication. Our joint summer program saw an 80% project success rate — a rare achievement.”
+                    <h3 className="text-2xl font-semibold text-purple-700 mb-4">
+                        Advancing Careers Through National Academic Collaboration
+                    </h3>
+                    <p className="text-lg text-gray-700 leading-relaxed">
+                        Vinayak Academy’s focus on educational excellence is strengthened through national-level academic partnerships. These collaborations provide students with access to specialized programs, modern learning environments, and industry-relevant opportunities — ensuring they are well-prepared for professional success across India’s evolving sectors.
                     </p>
-                    <p className="text-purple-700 font-bold text-lg">— Dr. Amelia Hart, Global Relations Officer, Cambridge University</p>
                 </div>
             </div>
+
 
             <UniversitySlider />
             <div className="text-center -mt-8">
@@ -159,7 +165,7 @@ const Collaboration = () => {
                         className="overflow-hidden rounded-3xl shadow-xl"
                     >
                         <img
-                            src="https://collegewaale.com/upes/wp-content/uploads/2023/12/upes-1.webp"
+                            src="/images/universities/Upes.webp"
                             alt="UPES Collaboration"
                             className="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
                         />
@@ -181,32 +187,33 @@ const Collaboration = () => {
                         </h3>
 
                         <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-                            In an academic partnership with{" "}
+                            Vinayak Academy has partnered with{" "}
                             <span className="font-semibold text-purple-700">
                                 University of Petroleum and Energy Studies (UPES)
-                            </span>
-                            , Vinayak Academy launched a specialized initiative focused on energy, law, business, and technology sectors. The collaboration emphasizes:
+                            </span>{" "}
+                            to offer students direct pathways into specialized programs in energy, law, business, and technology. Through this collaboration, several students have already been successfully enrolled, gaining access to premier academic and career opportunities. This initiative focuses on:
                         </p>
 
                         <ul className="list-disc pl-6 space-y-2 text-gray-600 text-base">
-                            <li>Joint certification programs across multiple disciplines</li>
-                            <li>Industry-immersive workshops and case-based learning</li>
-                            <li>Faculty exchanges and expert-led guest lectures</li>
-                            <li>Dedicated career pathways aligned with UPES’ innovation ecosystem</li>
+                            <li>Facilitated admissions into top-tier undergraduate and postgraduate programs at UPES</li>
+                            <li>Jointly curated certification programs to enhance academic credentials</li>
+                            <li>Workshops and live case studies designed to align with real industry challenges</li>
+                            <li>Interactive sessions with UPES faculty and access to innovation-driven learning environments</li>
+                            <li>Structured career counseling aligned with UPES placement and industry connect</li>
                         </ul>
 
+
                         {/* Quote */}
-                        <div className="mt-8 bg-purple-50 border-l-4 border-purple-400 p-5 rounded-xl shadow-sm">
-                            <p className="italic text-gray-600 leading-relaxed mb-3">
-                                “Vinayak Academy’s students demonstrate a unique blend of academic rigor and industry-readiness. Our collaboration has resulted in innovative program delivery and impactful student outcomes.”
+                        <div className="mt-8 bg-purple-100 border-l-4 border-purple-400 p-5 rounded-xl shadow-sm">
+                            <p className="text-gray-600 leading-relaxed italic">
+                                The partnership between Vinayak Academy and UPES reflects our shared commitment to quality education and real-world readiness. Through joint efforts, students are accessing world-class programs and career-focused training in key sectors like energy, law, business, and technology.
                             </p>
-                            <span className="block font-semibold text-purple-800">
-                                – Dr. Anjali Mahajan, Associate Dean, UPES
-                            </span>
                         </div>
+
                     </motion.div>
                 </div>
             </section>
+            <BackToTopButton />
         </section>
 
     );

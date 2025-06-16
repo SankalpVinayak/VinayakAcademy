@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import uniData from '../data/universities.json';
 import { useNavigate } from 'react-router-dom';
+import BackToTopButton from './BackToTopButton';
 
 const Universities = () => {
     const navigate = useNavigate();
@@ -12,7 +13,7 @@ const Universities = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-purple-100 py-12 px-6 md:px-12">
+        <div className="min-h-screen bg-white py-12 px-6 md:px-12">
             <h2 className="text-4xl font-bold text-center text-purple-700 mb-12 drop-shadow-sm">Explore Top Universities</h2>
             <div className="flex justify-center mb-8">
                 <button className="bg-purple-600 text-white font-semibold py-3 px-6 rounded-xl shadow-md 
@@ -62,7 +63,9 @@ const Universities = () => {
                             </div>
 
                             <div className="mt-4">
-                                <button onClick={() => navigate(`/university/${uni.id}`)} className="w-full bg-purple-600 text-white py-2 px-4 rounded-xl font-semibold shadow-md hover:bg-purple-700 transition">
+                                <button onClick={() => navigate(`/university/${uni.id}`)} className="w-full 
+                                bg-purple-600 text-white py-2 px-4 rounded-xl font-semibold shadow-md 
+                                hover:bg-purple-700 transition cursor-pointer">
                                     View More
                                 </button>
                             </div>
@@ -70,7 +73,7 @@ const Universities = () => {
                     </motion.div>
                 ))}
             </div>
-
+            <BackToTopButton />
         </div>
     );
 };

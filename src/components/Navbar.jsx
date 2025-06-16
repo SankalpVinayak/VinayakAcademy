@@ -39,6 +39,7 @@ const Navbar = () => {
         { label: 'Collaboration', path: '/collaboration' },
         { label: 'About Us', path: '/aboutUs' },
         { label: 'Enroll', path: '/counselling' },
+        { label: 'Universities', path: '/university' },
     ];
 
     return (

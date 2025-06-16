@@ -3,6 +3,7 @@ import Image1 from '../assets/About Us 4.jpg';
 import Image2 from '../assets/AboutUs2.svg';
 import Image3 from '../assets/AboutUs3.svg';
 import { motion } from 'framer-motion';
+import BackToTopButton from './BackToTopButton';
 
 const About = () => {
     const [mounted, setMounted] = useState(false);
@@ -138,6 +139,7 @@ const About = () => {
                     </>
                 )}
             </div>
+            <BackToTopButton />
         </section>
     );
 };

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { summary } from 'framer-motion/client';
 import { Navigate, useNavigate } from 'react-router-dom';
 import courseData from '../data/Courses.json'
+import BackToTopButton from './BackToTopButton';
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -77,7 +78,7 @@ const CourseCard = ({ title, fee, desc, duration, careerPath, summary }) => {
                     className="text-sm text-pink-500 underline hover:text-pink-700 transition mt-2 self-start cursor-pointer"
                     onClick={() => navigate(`/colleges/${encodeURIComponent(title)}`)}
                 >
-                    See Colleges
+                    See Universities
                 </button>
             </div>
         </motion.div>
@@ -113,34 +114,29 @@ const CourseDetails = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredData, setFilteredData] = useState(null);
 
-    const handleInputChange = (e) => {
-        setSearchTerm(e.target.value);
-    };
+    const handleSearch = () => {
+        if (searchTerm.trim() === '') {
+            setFilteredData(null);
+            return;
+        }
 
-    useEffect(() => {
-        const delayDebounce = setTimeout(() => {
-            if (searchTerm.trim() === '') {
-                setFilteredData(null);
-                return;
-            }
+        const query = searchTerm.trim().toLowerCase();
+        const allMatches = [];
 
-            const query = searchTerm.trim().toLowerCase();
-            const filtered = {};
-
-            Object.keys(courseData).forEach((category) => {
-                const matches = courseData[category].filter((course) =>
+        Object.entries(courseData).forEach(([category, courses]) => {
+            courses.forEach(course => {
+                if (
+                    typeof course.title === 'string' &&
                     course.title.toLowerCase().includes(query)
-                );
-                if (matches.length > 0) {
-                    filtered[category] = matches;
+                ) {
+                    allMatches.push({ ...course, category });
                 }
             });
+        });
 
-            setFilteredData(filtered);
-        }, 400); // 400ms debounce
-
-        return () => clearTimeout(delayDebounce); // cleanup
-    }, [searchTerm]);
+        console.log("🔍 Filtered Matches:", allMatches);
+        setFilteredData(allMatches);
+    };
 
     return (
         <motion.div
@@ -167,24 +163,23 @@ const CourseDetails = () => {
                     placeholder="Type a letter to search..."
                     className="w-full sm:w-96 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
                     value={searchTerm}
-                    onChange={handleInputChange}
+                    onChange={(e) => setSearchTerm(e.target.value)}
                 />
                 <button
-                    onClick={() => {
-                        setSearchTerm('');
-                        setFilteredData(null);
-                    }}
-                    className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-all"
+                    onClick={handleSearch}
+                    className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 cursor-pointer 
+                    transition-all"
                 >
                     Search
                 </button>
-                {searchTerm && (
+                {(searchTerm || setFilteredData) && (
                     <button
                         onClick={() => {
                             setSearchTerm('');
                             setFilteredData(null);
                         }}
-                        className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-all"
+                        className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 cursor-pointer 
+                        transition-all"
                     >
                         Clear
                     </button>
@@ -193,16 +188,23 @@ const CourseDetails = () => {
 
             {/* Render Filtered or Full Course Data */}
             {filteredData ? (
-                Object.keys(filteredData).length > 0 ? (
-                    <>
-                        {filteredData.schooling && <CourseSection title="Academic Level Courses" data={filteredData.schooling} />}
-                        {filteredData.undergraduate && <CourseSection title="Undergraduate Courses" data={filteredData.undergraduate} />}
-                        {filteredData.postgraduate && <CourseSection title="Postgraduate Courses" data={filteredData.postgraduate} />}
-                        {filteredData.diploma && <CourseSection title="Diploma Courses" data={filteredData.diploma} />}
-                    </>
+                filteredData.length > 0 ? (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {filteredData.map((course, index) => (
+                            <CourseCard
+                                key={index}
+                                title={course.title}
+                                fee={course.fee}
+                                desc={course.desc}
+                                summary={course.summary}
+                                duration={course.duration}
+                                careerPath={course.careerPath}
+                            />
+                        ))}
+                    </div>
                 ) : (
                     <p className="text-center text-red-500 text-lg mt-10">
-                        No courses found starting with '{searchTerm.charAt(0)}'
+                        No results found for "<strong>{searchTerm}</strong>"
                     </p>
                 )
             ) : (
@@ -213,6 +215,7 @@ const CourseDetails = () => {
                     <CourseSection title="Diploma Courses" data={courseData.diploma} />
                 </>
             )}
+            <BackToTopButton />
         </motion.div>
     );
 };

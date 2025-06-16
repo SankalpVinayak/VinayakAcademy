@@ -51,12 +51,12 @@ const Impact = () => {
 
     return (
         <div>
-            <div className="text-center mt-16 px-6 md:px-20">
-                <h2 className="text-4xl font-bold text-center mb-4 italic">
+            <div className="text-center mt-6 px-6 md:px-20">
+                <h2 className="text-4xl lg:text-5xl 2xl:text-5xl font-extrabold text-[#B71D8D]">
                     Our Impact in Numbers
                 </h2>
 
-                <p className="text-center mb-12 italic text-lg">
+                <p className="text-center mb-12 mt-4 italic text-lg font-semibold">
                     Empowering Learners, One Journey at a Time
                 </p>
 

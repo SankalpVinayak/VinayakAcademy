@@ -2,7 +2,11 @@ import { ClipboardCheck, MessageSquareHeart, Waypoints, } from "lucide-react";
 import { MessageSquareQuote, PhoneCall, MapPin } from "lucide-react";
 import { Compass, School, Globe, Users, FileBarChart2, Brain } from "lucide-react"
 import { motion } from "framer-motion";
-
+import counselling from "../assets/counselling.png"
+import counsellor1 from "../assets/counsellor1.avif"
+import counsellor2 from "../assets/counsellor2.avif"
+import counsellor3 from "../assets/counsellor3.avif"
+import BackToTopButton from "./BackToTopButton";
 
 const steps = [
     {
@@ -86,12 +90,15 @@ const Counselling = () => {
                     <p className="text-lg text-gray-700 mb-6 font-semibold">
                         Counselling at Vinayak Academy helps you make informed decisions — whether you're a student unsure about your path or a parent looking for guidance.
                     </p>
-                    <button className="bg-purple-600 text-white px-6 py-3 rounded-full hover:bg-purple-800 transition">
-                        Schedule a Free Session
-                    </button>
+                    <a href="/contactUs">
+                        <button className="bg-purple-600 text-white px-6 py-3 rounded-full 
+                    hover:bg-purple-800 transition cursor-pointer">
+                            Schedule a Free Session
+                        </button>
+                    </a>
                 </div>
                 <img
-                    src='https://www.braintism.com/images/service/counselling1.png'
+                    src={counselling}
                     alt="Counselling Illustration"
                     className=""
                 />
@@ -195,19 +202,19 @@ const Counselling = () => {
                             name: "Dr. Neha Verma",
                             role: "Academic & Career Advisor",
                             quote: "Helping students discover their true calling with clarity and care.",
-                            img: "https://randomuser.me/api/portraits/women/44.jpg",
+                            img: counsellor1,
                         },
                         {
                             name: "Mr. Rahul Singh",
                             role: "Motivational Mentor",
                             quote: "Empowering young minds to make confident life choices.",
-                            img: "https://randomuser.me/api/portraits/men/46.jpg",
+                            img: counsellor2,
                         },
                         {
                             name: "Ms. Pooja Tiwari",
                             role: "Parental Support Lead",
                             quote: "Supporting families through key academic and emotional decisions.",
-                            img: "https://randomuser.me/api/portraits/women/52.jpg",
+                            img: counsellor3,
                         },
                     ].map((counsellor, idx) => (
                         <motion.div
@@ -283,6 +290,7 @@ const Counselling = () => {
                     </div>
                 </div>
             </section>
+            <BackToTopButton />
         </div>
     );
 }
