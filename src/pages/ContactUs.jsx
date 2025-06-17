@@ -92,7 +92,7 @@
 
 import React from 'react'
 import { Mail, PhoneCall, MapPin, Building2 } from 'lucide-react'
-import contactImage from '../assets/cuate.svg' // Add your illustration here
+import contactImage from '../assets/cuate.svg' // Add your Illustration here
 import logo from '../assets/VALogo2.svg'
 
 const ContactUs = () => {

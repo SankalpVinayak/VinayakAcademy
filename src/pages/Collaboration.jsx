@@ -149,6 +149,7 @@ const Collaboration = () => {
                     font-semibold text-center py-3 px-6 rounded-xl shadow-md hover:bg-purple-800 
                     transition duration-300">
                     🎓 See Full List
+
                 </button>
             </div>
 
