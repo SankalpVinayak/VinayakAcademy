@@ -2,10 +2,10 @@ import { ClipboardCheck, MessageSquareHeart, Waypoints, } from "lucide-react";
 import { MessageSquareQuote, PhoneCall, MapPin } from "lucide-react";
 import { Compass, School, Globe, Users, FileBarChart2, Brain } from "lucide-react"
 import { motion } from "framer-motion";
-import counselling from "../assets/counselling.png"
-import counsellor1 from "../assets/counsellor1.avif"
-import counsellor2 from "../assets/counsellor2.avif"
-import counsellor3 from "../assets/counsellor3.avif"
+import counselling from "../assets/Counselling.png"
+import counsellor1 from "../assets/Counsellor1.avif"
+import counsellor2 from "../assets/Counsellor2.avif"
+import counsellor3 from "../assets/Counsellor3.avif"
 import BackToTopButton from "./BackToTopButton";
 
 const steps = [
