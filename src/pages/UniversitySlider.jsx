@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import UPES from "../assets/UPES2.jpg"
-import AMITY from "../assets/AMITY2.jpg"
+import AMITY from "../assets/Amity2.jpg"
 
 const universities = [
     {
