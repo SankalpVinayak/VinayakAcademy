@@ -7,6 +7,7 @@ import counsellor1 from "../assets/Counsellor1.avif"
 import counsellor2 from "../assets/Counsellor2.avif"
 import counsellor3 from "../assets/Counsellor3.avif"
 import BackToTopButton from "./BackToTopButton";
+import { Link } from "react-router-dom";
 
 const steps = [
     {
@@ -90,12 +91,12 @@ const Counselling = () => {
                     <p className="text-lg text-gray-700 mb-6 font-semibold">
                         Counselling at Vinayak Academy helps you make informed decisions — whether you're a student unsure about your path or a parent looking for guidance.
                     </p>
-                    <a href="/contactUs">
+                    <Link to='/contactUs'>
                         <button className="bg-purple-600 text-white px-6 py-3 rounded-full 
                     hover:bg-purple-800 transition cursor-pointer">
                             Schedule a Free Session
                         </button>
-                    </a>
+                    </Link>
                 </div>
                 <img
                     src={counselling}

@@ -73,8 +73,9 @@ const Navbar = () => {
                 {/* Login button (desktop) */}
                 <Link to="/contactUs">
                     <div className="hidden md:block">
-                        <button className="bg-purple-800 text-white px-6 py-2 rounded-full shadow-md hover:bg-purple-700 transition cursor-pointer">
-                            Conatct Us
+                        <button className="bg-purple-800 text-white lg:px-6 lg:py-2 md:px-4 md:py-1 text-base 
+                        md:text-sm rounded-full shadow-md hover:bg-purple-700 transition cursor-pointer">
+                            Contact Us
                         </button>
                     </div>
                 </Link>

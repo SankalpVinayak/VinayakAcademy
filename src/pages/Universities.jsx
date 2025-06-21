@@ -52,6 +52,26 @@ const Universities = () => {
                                     <span className="line-clamp-1 font-semibold">{uni.location}</span>
                                 </div>
 
+                                <div className="flex items-center gap-2 text-gray-600 min-h-[1.5rem]">
+                                    🏛️ <span className="font-lg font-bold text-purple-700">UGC:</span>
+                                    <span
+                                        className={`px-3 py-1 rounded-full text-sm font-semibold ${uni.UGC === 'Approved'
+                                            ? 'bg-green-100 text-green-700'
+                                            : 'bg-red-100 text-red-700'
+                                            }`}
+                                    >
+                                        {uni.UGC}
+                                    </span>
+                                </div>
+
+                                {/* NAAC Grade */}
+                                <div className="flex items-center gap-2 text-gray-600 min-h-[1.5rem]">
+                                    🏅 <span className="font-lg font-bold text-purple-700">NAAC Grade:</span>
+                                    <span className="px-3 py-1 rounded-full text-sm font-semibold bg-yellow-100 text-yellow-800">
+                                        {uni.NAAC}
+                                    </span>
+                                </div>
+
                                 {/* <div className="flex items-center gap-2 text-gray-600 min-h-[1.5rem]">
                                     💰 <span className="font-medium text-purple-700">Fee:</span>
                                     <span>{uni.fee}</span>
