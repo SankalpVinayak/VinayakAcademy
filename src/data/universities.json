@@ -5,6 +5,8 @@
         "fee": "Rs.50000",
         "location": "Deharadun",
         "logoImage": "/images/universities/UpesLogo.jpg",
+        "UGC": "Approved",
+        "NAAC": "A",
         "courses": [
             {
                 "name": "B.A.",
@@ -19,7 +21,7 @@
                 "duration": 3
             },
             {
-                "name": "B.com",
+                "name": "B.Com.",
                 "fee": "Rs. 44,500",
                 "subject": "GENERAL",
                 "duration": 3
@@ -33,6 +35,8 @@
         "fee": "Rs.60000",
         "location": "Haridwar",
         "logoImage": "/images/universities/HULogo.png",
+        "UGC": "Approved",
+        "NAAC": "In Process",
         "courses": [
             {
                 "name": "B.A.",
@@ -47,7 +51,7 @@
                 "duration": 3
             },
             {
-                "name": "B.com",
+                "name": "B.Com.",
                 "fee": "Rs. 44,500",
                 "subject": "GENERAL",
                 "duration": 3
@@ -61,6 +65,8 @@
         "fee": "Rs.60000",
         "location": "Indore",
         "logoImage": "/images/universities/SageLogo.jpeg",
+        "UGC": "Approved",
+        "NAAC": "A+",
         "courses": [
             {
                 "name": "B.A.",
@@ -75,7 +81,7 @@
                 "duration": 3
             },
             {
-                "name": "B.com",
+                "name": "B.Com.",
                 "fee": "Rs. 44,500",
                 "subject": "GENERAL",
                 "duration": 3
@@ -89,6 +95,8 @@
         "fee": "Rs.70000",
         "location": "Aligarh",
         "logoImage": "/images/universities/MULogo.jpeg",
+        "UGC": "Approved",
+        "NAAC": "A+",
         "courses": [
             {
                 "name": "B.A.",
@@ -97,55 +105,55 @@
                 "duration": 3
             },
             {
-                "name": "B.com",
+                "name": "B.Com.",
                 "fee": "Rs. 45,000",
                 "subject": "GENERAL",
                 "duration": 3
             },
             {
-                "name": "BSC",
+                "name": "B.Sc.",
                 "fee": "Rs. 76000",
                 "subject": "PCM/PCB/ZBC",
                 "duration": 3
             },
             {
-                "name": "BCA",
+                "name": "B.C.A.",
                 "fee": "Rs. 84000",
                 "subject": "GENERAL",
                 "duration": 3
             },
             {
-                "name": "BLIB",
+                "name": "B.Lib.",
                 "fee": "Rs. 26500",
                 "subject": "GENERAL",
                 "duration": 1
             },
             {
-                "name": "MA",
+                "name": "M.A.",
                 "fee": "Rs. 37000",
                 "subject": "HIN/ENG/HIS/POL/SOC",
                 "duration": 2
             },
             {
-                "name": "M.com",
+                "name": "M.Com.",
                 "fee": "Rs. 37000",
                 "subject": "GENERAL",
                 "duration": 2
             },
             {
-                "name": "MSC",
+                "name": "M.Sc.",
                 "fee": "Rs. 71000",
                 "subject": "Maths",
                 "duration": 2
             },
             {
-                "name": "MBA",
+                "name": "M.B.A.",
                 "fee": "Rs. 77000",
                 "subject": "HR/MARKETING/FINANCE/IT/OPERATIONS",
                 "duration": 2
             },
             {
-                "name": "MLIB",
+                "name": "M.Lib.",
                 "fee": "Rs. 31000",
                 "subject": "GENERAL",
                 "duration": 1
@@ -157,7 +165,7 @@
                 "duration": 1
             },
             {
-                "name": "MCA",
+                "name": "M.C.A.",
                 "fee": "Rs. 77000",
                 "subject": "GENERAL",
                 "duration": 1
@@ -177,6 +185,8 @@
         "fee": "Rs.60000",
         "location": "Meerut",
         "logoImage": "/images/universities/SVSULogo.png",
+        "UGC": "Approved",
+        "NAAC": "A",
         "courses": [
             {
                 "name": "B.A.",
@@ -191,61 +201,61 @@
                 "duration": 3
             },
             {
-                "name": "B.com",
+                "name": "B.Com.",
                 "fee": "Rs. 44,500",
                 "subject": "GENERAL",
                 "duration": 3
             },
             {
-                "name": "BBA",
+                "name": "B.B.A",
                 "fee": "Rs. 56,500",
                 "subject": "GENERAL",
                 "duration": 3
             },
             {
-                "name": "BLIB",
+                "name": "B.Lib.",
                 "fee": "Rs. 22,500",
                 "subject": "GENERAL",
                 "duration": 1
             },
             {
-                "name": "M.com",
+                "name": "M.Com.",
                 "fee": "Rs. 38,500",
                 "subject": "GENERAL",
                 "duration": 3
             },
             {
-                "name": "MLIB",
+                "name": "M.Lib.",
                 "fee": "Rs. 26500",
                 "subject": "GENERAL",
                 "duration": 1
             },
             {
-                "name": "MA",
+                "name": "M.A.",
                 "fee": "Rs. 38,500",
                 "subject": "HIN/ENG/HIS/POL/SOC/ECO/PUB ADM",
                 "duration": 2
             },
             {
-                "name": "MBA",
+                "name": "M.B.A.",
                 "fee": "Rs. 66,500",
                 "subject": "HR/MARKETING/FINANCE/IT",
                 "duration": 2
             },
             {
-                "name": "MA",
+                "name": "M.A.",
                 "fee": "Rs. 43,500",
                 "subject": "EDUCATION",
                 "duration": 2
             },
             {
-                "name": "MA",
+                "name": "M.A.",
                 "fee": "Rs. 42,500",
                 "subject": "JMC",
                 "duration": 2
             },
             {
-                "name": "MA",
+                "name": "M.A.",
                 "fee": "Rs. 40,500",
                 "subject": "BUDDHISM",
                 "duration": 2
@@ -259,6 +269,8 @@
         "fee": "Rs.60000",
         "location": "Jaipur",
         "logoImage": "/images/universities/SGVULogo.jpg",
+        "UGC": "Approved",
+        "NAAC": "A+",
         "courses": [
             {
                 "name": "B.A.",
@@ -273,7 +285,7 @@
                 "duration": 3
             },
             {
-                "name": "B.com",
+                "name": "B.Com.",
                 "fee": "Rs. 44,500",
                 "subject": "GENERAL",
                 "duration": 3
@@ -287,45 +299,47 @@
         "fee": "Rs.60000",
         "location": "Talawabdi Sabo, Punjab",
         "logoImage": "/images/universities/GKULogo.jpeg",
+        "UGC": "Approved",
+        "NAAC": "A++",
         "courses": [
             {
-                "name": "BA",
+                "name": "B.A.",
                 "fee": "Rs. 73,200",
                 "subject": "GENERAL",
                 "duration": 3
             },
             {
-                "name": "BBA",
+                "name": "B.B.A",
                 "fee": "Rs. 1,06,800",
                 "subject": "GENERAL",
                 "duration": 3
             },
             {
-                "name": "BCA",
+                "name": "B.C.A.",
                 "fee": "Rs. 1,20,000",
                 "subject": "GENERAL",
                 "duration": 3
             },
             {
-                "name": "MA",
+                "name": "M.A.",
                 "fee": "Rs. 60,000",
                 "subject": "HIN/ENG/HIS/POL/SOC/ECO",
                 "duration": 2
             },
             {
-                "name": "MCOM",
+                "name": "M.Com.",
                 "fee": "Rs. 80,000",
                 "subject": "FINANCE AND TAXATION MANAGEMENT",
                 "duration": 2
             },
             {
-                "name": "MBA",
+                "name": "M.B.A.",
                 "fee": "Rs. 1,20,000",
                 "subject": "HRM/FINANCE/MARKETING/IT/BUSS. ANALYTICS/LOGISTICS/DIGITAL MARKETING",
                 "duration": 2
             },
             {
-                "name": "MCA",
+                "name": "M.C.A.",
                 "fee": "Rs. 1,80,000",
                 "subject": "GENERAL",
                 "duration": 3
@@ -339,7 +353,7 @@
             {
                 "name": "DIPLOMA",
                 "fee": "Rs. 25,000",
-                "subject": "EARLY CHILDHOOD CARE AND EDUCATION",
+                "subject": "EARLY CHILDHOOD CARE & EDUCATION",
                 "duration": 1
             },
             {
@@ -369,27 +383,29 @@
         "fee": "Rs.60000",
         "location": "Imphal, Manipur",
         "logoImage": "/images/universities/AIULogo.png",
+        "UGC": "Approved",
+        "NAAC": "Uncredited",
         "courses": [
             {
-                "name": "MHM",
+                "name": "M.H.M.",
                 "fee": "Rs. 13,00,000",
                 "subject": "Hotel Management",
                 "duration": 2
             },
             {
-                "name": "P.G Diploma",
+                "name": "Diploma",
                 "fee": "Rs. 60,000",
                 "subject": "Guidance & Counseling / Early Childhood Care & Education",
                 "duration": 1
             },
             {
-                "name": "B.Tech",
+                "name": "B.Tech.",
                 "fee": "Rs. 3,00,000",
                 "subject": "Automobile / Bio-Technology / Civil / Electricals / Electricals & Electronics / Electronics & Communication / Mechanical / Textile Engineering / Fire & Industrial / Production Engineering / Chemical Engineering / Instrumentation Engineering / Dairy Engineering / Computer Application / Agriculture Engineering / Information Technology / Software Engineering / Bio-Informatics / Bio-Chemistry",
                 "duration": 4
             },
             {
-                "name": "M.Tech",
+                "name": "M.Tech.",
                 "fee": "Rs. 1,70,000",
                 "subject": "Civil / Electrical / Electrical & Electronics / Electronics & Communication / Mechanical / Information Technology",
                 "duration": 2
@@ -397,11 +413,11 @@
             {
                 "name": "Diploma",
                 "fee": "Rs. 1,26,000",
-                "subject": "Automobile Engineering / Chemical Engineering / Civil Engineering / Computer Science & Engineering / Electrical Engineering / Electricals & Electronics Engineering / Electronics & Communication Engineering / Information Technology Engineering / Instrumental Technology Engineering / Mechanical Engineering / Biotechnology / Bio-Informatics / Bio-Chemistry",
+                "subject": "Enginnering / Automobile Engineering / Chemical Engineering / Civil Engineering / Computer Science Engineering / Electrical Engineering / Electrical and Electronics Engineering / Electronics and Communication Engineering / Information Technology Engineering / Instrumentation Engineering / Mechanical Engineering / Biotechnology / Bioinformatics / Biochemistry",
                 "duration": 3
             },
             {
-                "name": "LL.B.",
+                "name": "L.L.B.",
                 "fee": "Rs. 2,10,000",
                 "subject": "General",
                 "duration": 3
@@ -415,6 +431,8 @@
         "fee": "Rs.60000",
         "location": "Online,Sikkim",
         "logoImage": "/images/universities/BOSSE.jpeg",
+        "UGC": "Not Applicable",
+        "NAAC": "Not Applicable",
         "courses": [
             {
                 "name": "SECONDARY",
@@ -437,6 +455,8 @@
         "fee": "Rs.60000",
         "location": "Vadodra",
         "logoImage": "/images/universities/PULogo.png",
+        "UGC": "Approved",
+        "NAAC": "A++",
         "courses": [
             {
                 "name": "B.A.",
@@ -451,7 +471,7 @@
                 "duration": 3
             },
             {
-                "name": "B.com",
+                "name": "B.Com.",
                 "fee": "Rs. 44,500",
                 "subject": "GENERAL",
                 "duration": 3
@@ -465,6 +485,8 @@
         "fee": "Rs.100000",
         "location": "Noida, Lucknow",
         "logoImage": "/images/universities/AmityLogo.jpg",
+        "UGC": "Approved",
+        "NAAC": "A+",
         "courses": [
             {
                 "name": "B.A.",
@@ -479,7 +501,7 @@
                 "duration": 3
             },
             {
-                "name": "B.com",
+                "name": "B.Com.",
                 "fee": "Rs. 44,500",
                 "subject": "GENERAL",
                 "duration": 3
@@ -493,6 +515,8 @@
         "fee": "Rs.60000",
         "location": "Phagwara, Punjab",
         "logoImage": "/images/universities/LPULogo.png",
+        "UGC": "Approved",
+        "NAAC": "A++",
         "courses": [
             {
                 "name": "B.A.",
@@ -507,7 +531,7 @@
                 "duration": 3
             },
             {
-                "name": "B.com",
+                "name": "B.Com.",
                 "fee": "Rs. 44,500",
                 "subject": "GENERAL",
                 "duration": 3
@@ -521,6 +545,8 @@
         "fee": "Rs.100000",
         "location": "Chandigarh",
         "logoImage": "/images/universities/CULogo.png",
+        "UGC": "Approved",
+        "NAAC": "A+",
         "courses": [
             {
                 "name": "B.A.",

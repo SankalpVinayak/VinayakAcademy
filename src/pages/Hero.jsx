@@ -5,6 +5,7 @@ import Impact from "./Impact";
 import WhyUs from "./WhyUs";
 import Values from "./Values";
 import SuccessStories from "./SuccessStories";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
     const [activeTab, setActiveTab] = useState("impact");
@@ -31,11 +32,12 @@ const HeroSection = () => {
                     <p className="text-sm tracking-wider text-[#B71D8D] italic font-semibold mt-3">
                         *START YOUR JOURNEY.
                     </p>
-                    <a href="/counselling" className="text-blue-600 underline">
+                    <Link to='/counselling'>
                         <button className="bg-purple-500 text-white mt-3 px-6 py-3 rounded-xl shadow-md hover:bg-violet-800 transition cursor-pointer w-full sm:w-auto">
                             Enroll Now
                         </button>
-                    </a>
+                    </Link>
+
 
                 </div>
             </div>

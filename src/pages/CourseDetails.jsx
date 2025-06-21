@@ -21,7 +21,7 @@ const CourseCard = ({ title, fee, desc, duration, careerPath, summary }) => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
             className="bg-white rounded-xl shadow-lg transition-all duration-300 w-60 md:w-64 lg:w-72 flex 
-            flex-col justify-between p-4 border border-purple-100 relative h-[280px] overflow-hidden"
+            flex-col justify-between p-4 border border-purple-100 relative min-h-[280px] overflow-hidden"
         >
             <div className="absolute top-2 right-2 bg-purple-100 text-purple-700 text-xs px-2 py-1 
             rounded-full font-medium shadow-sm">
@@ -91,7 +91,7 @@ const CourseSection = ({ title, data }) => (
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        className="mb-20 px-4 py-12 bg-purple-100 rounded-xl shadow-inner"
+        className="mb-20 px-4 py-12 bg-purple-100 rounded-xl shadow-inner w-fit mx-auto"
     >
         <motion.h2
             variants={fadeInUp}
