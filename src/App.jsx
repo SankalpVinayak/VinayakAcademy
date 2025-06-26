@@ -11,6 +11,7 @@ import CollegeList from './pages/CollegeList'
 import UniversityComparison from './pages/UniversitiyComparison'
 import Universities from './pages/Universities'
 import UniversityPage from './pages/UniversityPage'
+import CourseInfographic from './pages/CourseInfographic'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/courseDetails' element={<CourseDetails />} />
+          <Route path='/courseInfographic' element={<CourseInfographic />} />
           <Route path='/contactUs' element={<ContactUs />} />
           <Route path='/aboutUs' element={<About />} />
           <Route path='/counselling' element={<Counselling />} />

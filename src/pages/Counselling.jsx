@@ -7,6 +7,7 @@ import counsellor1 from "../assets/Counsellor1.avif"
 import counsellor2 from "../assets/Counsellor2.avif"
 import counsellor3 from "../assets/Counsellor3.avif"
 import BackToTopButton from "./BackToTopButton";
+import { Link } from "react-router-dom";
 
 const steps = [
     {
@@ -90,12 +91,12 @@ const Counselling = () => {
                     <p className="text-lg text-gray-700 mb-6 font-semibold">
                         Counselling at Vinayak Academy helps you make informed decisions — whether you're a student unsure about your path or a parent looking for guidance.
                     </p>
-                    <a href="/contactUs">
+                    <Link to='/contactUs'>
                         <button className="bg-purple-600 text-white px-6 py-3 rounded-full 
                     hover:bg-purple-800 transition cursor-pointer">
                             Schedule a Free Session
                         </button>
-                    </a>
+                    </Link>
                 </div>
                 <img
                     src={counselling}
@@ -199,19 +200,19 @@ const Counselling = () => {
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
                     {[
                         {
-                            name: "Dr. Neha Verma",
+                            name: "Sunita Savita",
                             role: "Academic & Career Advisor",
                             quote: "Helping students discover their true calling with clarity and care.",
                             img: counsellor1,
                         },
                         {
-                            name: "Mr. Rahul Singh",
+                            name: "Yashika Sahu",
                             role: "Motivational Mentor",
                             quote: "Empowering young minds to make confident life choices.",
                             img: counsellor2,
                         },
                         {
-                            name: "Ms. Pooja Tiwari",
+                            name: "Shweta Verma",
                             role: "Parental Support Lead",
                             quote: "Supporting families through key academic and emotional decisions.",
                             img: counsellor3,
@@ -219,22 +220,17 @@ const Counselling = () => {
                     ].map((counsellor, idx) => (
                         <motion.div
                             key={idx}
-                            className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-transform transform hover:scale-[1.03] p-8 text-center border-t-4 border-purple-600"
+                            className="bg-gradient-to-br from-white via-gray-50 to-purple-50 rounded-2xl shadow-xl hover:shadow-2xl transition-transform transform hover:scale-[1.02] p-6 text-center border-t-4 border-purple-600"
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: idx * 0.2 }}
                         >
-                            <div className="w-24 h-24 mx-auto mb-4 relative">
-                                <div className="absolute inset-0 rounded-full bg-purple-200 blur-lg scale-110"></div>
-                                <img
-                                    src={counsellor.img}
-                                    alt={counsellor.name}
-                                    className="relative z-10 w-24 h-24 rounded-full object-cover border-4 border-white shadow-md"
-                                />
+                            <div className="mb-4">
+                                <h3 className="text-2xl font-bold text-purple-700 tracking-wide">{counsellor.name}</h3>
+                                <p className="text-sm text-gray-500 font-medium mt-1">{counsellor.role}</p>
                             </div>
-                            <h3 className="text-xl font-semibold text-purple-700">{counsellor.name}</h3>
-                            <p className="text-sm text-gray-500 mb-3">{counsellor.role}</p>
-                            <p className="text-gray-600 italic text-sm">"{counsellor.quote}"</p>
+
+                            <p className="text-gray-600 italic text-sm px-4 py-3">"{counsellor.quote}"</p>
                         </motion.div>
                     ))}
                 </div>

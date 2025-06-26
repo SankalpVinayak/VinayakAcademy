@@ -1,3 +1,4 @@
+import { col } from 'framer-motion/client';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -55,8 +56,42 @@ const CollegeList = () => {
                         className="w-24 h-24 object-contain"
                     />
                     <div className="flex-1">
-                        <h3 className="text-xl font-semibold text-purple-800">{college.name}</h3>
-                        <p className="text-gray-600">{college.location}</p>
+                        <div className="flex items-center text-purple-800 text-2xl font-extrabold gap-2">
+                            <h3 className="">
+                                🎓 {college.name}
+                            </h3>
+                        </div>
+
+
+                        <div className="flex items-center text-gray-600 text-sm gap-2 mt-3">
+                            📍 <span className="font-medium text-gray-800">{college.location}</span>
+                        </div>
+
+                        {/* UGC */}
+                        {college.name !== 'Board of Open Schooling and Skill Education' && (
+                            <div className="flex items-center text-sm gap-2 mt-2">
+                                🏛️ <span className="text-purple-700 font-semibold">UGC:</span>
+                                <span
+                                    className={`px-3 py-1 rounded-full text-xs font-semibold ${college.UGC === 'Approved'
+                                        ? 'bg-green-100 text-green-700'
+                                        : 'bg-red-100 text-red-700'
+                                        }`}
+                                >
+                                    {college.UGC}
+                                </span>
+                            </div>
+                        )}
+
+                        {/* NAAC */}
+                        {college.name !== 'Board of Open Schooling and Skill Education' && (
+                            <div className="flex items-center text-sm gap-2 mt-2">
+                                🏅 <span className="text-purple-700 font-semibold">NAAC Grade:</span>
+                                <span className="px-3 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-800">
+                                    {college.NAAC}
+                                </span>
+                            </div>
+                        )}
+
                         <div className="mt-2">
                             <h4 className="font-semibold text-purple-800">Course:</h4>
                             <ul className="list-disc list-inside">

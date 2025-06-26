@@ -11,7 +11,7 @@ const universityPartners = [
     "/images/universities/SageLogo.jpeg",
     "/images/universities/MULogo.jpeg",
     "/images/universities/LPULogo.png",
-    "/images/universities/SVSULogo.png",
+    "/images/universities/SVSULogo.jpeg",
     "/images/universities/SGVULogo.jpg",
     "/images/universities/GKULogo.jpeg",
     "/images/universities/AIULogo.png",
@@ -63,11 +63,11 @@ const Collaboration = () => {
             {/* Hero */}
             <div className="relative h-[40vh] bg-cover bg-center" style={{ backgroundImage: "url('/images/university-bg.jpg')" }}>
                 <div className="absolute inset-0 bg-purple-400 flex items-center justify-center">
-                    <div className="text-center px-6">
-                        <h1 className="text-white text-4xl md:text-5xl font-extrabold mb-4">
+                    <div className="text-center px-1 md:px-6">
+                        <h1 className="text-white text-2xl md:text-5xl font-extrabold mb-4">
                             Strategic Academic Partnerships in India
                         </h1>
-                        <p className="text-white text-lg md:text-xl max-w-2xl mx-auto">
+                        <p className="text-white text-md md:text-xl max-w-2xl mx-auto">
                             Vinayak Academy partners with leading Indian universities and institutions to deliver high-impact academic programs. These collaborations ensure our students gain access to quality education, industry-relevant skills, and structured pathways to professional success.
                         </p>
 

@@ -1,5 +1,5 @@
 {
-    "schooling": [
+    "foundation": [
         {
             "title": "Secondary",
             "fee": "₹40,000",
@@ -233,7 +233,7 @@
         {
             "title": "Engineering",
             "fee": "₹1,20,000 – ₹2,00,000",
-            "duration": "1 Year",
+            "duration": "2 Year",
             "summary": "Innovative problem-solving across multiple technical disciplines.",
             "careerPath": "Software Engineer, Civil Engineer, Mechanical Engineer, Systems Architect",
             "desc": "Engineering programs span various fields such as Computer Science, Mechanical, Civil, and Electronics. With a focus on design thinking and real-world applications, students graduate with the ability to innovate and lead."
