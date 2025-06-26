@@ -11,7 +11,7 @@ const universityPartners = [
     "/images/universities/SageLogo.jpeg",
     "/images/universities/MULogo.jpeg",
     "/images/universities/LPULogo.png",
-    "/images/universities/SVSULogo.png",
+    "/images/universities/SVSULogo.jpeg",
     "/images/universities/SGVULogo.jpg",
     "/images/universities/GKULogo.jpeg",
     "/images/universities/AIULogo.png",

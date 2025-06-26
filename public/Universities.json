@@ -5,6 +5,8 @@
         "fee": "Rs.50000",
         "location": "Deharadun",
         "logoImage": "/images/universities/UpesLogo.jpg",
+        "UGC": "Approved",
+        "NAAC": "A",
         "courses": [
             {
                 "name": "B.A.",
@@ -33,6 +35,8 @@
         "fee": "Rs.60000",
         "location": "Haridwar",
         "logoImage": "/images/universities/HULogo.png",
+        "UGC": "Approved",
+        "NAAC": "In Process",
         "courses": [
             {
                 "name": "B.A.",
@@ -61,6 +65,8 @@
         "fee": "Rs.60000",
         "location": "Indore",
         "logoImage": "/images/universities/SageLogo.jpeg",
+        "UGC": "Approved",
+        "NAAC": "A+",
         "courses": [
             {
                 "name": "B.A.",
@@ -89,6 +95,8 @@
         "fee": "Rs.70000",
         "location": "Aligarh",
         "logoImage": "/images/universities/MULogo.jpeg",
+        "UGC": "Approved",
+        "NAAC": "A+",
         "courses": [
             {
                 "name": "B.A.",
@@ -176,7 +184,9 @@
         "name": "Swami Vivekanand Subharti University",
         "fee": "Rs.60000",
         "location": "Meerut",
-        "logoImage": "/images/universities/SVSULogo.png",
+        "logoImage": "/images/universities/SVSULogo.jpeg",
+        "UGC": "Approved",
+        "NAAC": "A",
         "courses": [
             {
                 "name": "B.A.",
@@ -259,6 +269,8 @@
         "fee": "Rs.60000",
         "location": "Jaipur",
         "logoImage": "/images/universities/SGVULogo.jpg",
+        "UGC": "Approved",
+        "NAAC": "A+",
         "courses": [
             {
                 "name": "B.A.",
@@ -287,6 +299,8 @@
         "fee": "Rs.60000",
         "location": "Talawabdi Sabo, Punjab",
         "logoImage": "/images/universities/GKULogo.jpeg",
+        "UGC": "Approved",
+        "NAAC": "A++",
         "courses": [
             {
                 "name": "B.A.",
@@ -369,6 +383,8 @@
         "fee": "Rs.60000",
         "location": "Imphal, Manipur",
         "logoImage": "/images/universities/AIULogo.png",
+        "UGC": "Approved",
+        "NAAC": "Uncredited",
         "courses": [
             {
                 "name": "M.H.M.",
@@ -398,7 +414,7 @@
                 "name": "Diploma",
                 "fee": "Rs. 1,26,000",
                 "subject": "Automobile Engineering / Chemical Engineering / Civil Engineering / Computer Science Engineering / Electrical Engineering / Electrical and Electronics Engineering / Electronics and Communication Engineering / Information Technology Engineering / Instrumentation Engineering / Mechanical Engineering / Biotechnology / Bioinformatics / Biochemistry",
-                "duration": 3
+                "duration": 2
             },
             {
                 "name": "L.L.B.",
@@ -415,6 +431,8 @@
         "fee": "Rs.60000",
         "location": "Online,Sikkim",
         "logoImage": "/images/universities/BOSSE.jpeg",
+        "UGC": "Not Applicable",
+        "NAAC": "Not Applicable",
         "courses": [
             {
                 "name": "SECONDARY",
@@ -437,6 +455,8 @@
         "fee": "Rs.60000",
         "location": "Vadodra",
         "logoImage": "/images/universities/PULogo.png",
+        "UGC": "Approved",
+        "NAAC": "A++",
         "courses": [
             {
                 "name": "B.A.",
@@ -465,6 +485,8 @@
         "fee": "Rs.100000",
         "location": "Noida, Lucknow",
         "logoImage": "/images/universities/AmityLogo.jpg",
+        "UGC": "Approved",
+        "NAAC": "A+",
         "courses": [
             {
                 "name": "B.A.",
@@ -489,10 +511,12 @@
     },
     {
         "id": 12,
-        "name": "Loverly Professional University",
+        "name": "Lovely Professional University",
         "fee": "Rs.60000",
         "location": "Phagwara, Punjab",
         "logoImage": "/images/universities/LPULogo.png",
+        "UGC": "Approved",
+        "NAAC": "A++",
         "courses": [
             {
                 "name": "B.A.",
@@ -521,6 +545,8 @@
         "fee": "Rs.100000",
         "location": "Chandigarh",
         "logoImage": "/images/universities/CULogo.png",
+        "UGC": "Approved",
+        "NAAC": "A+",
         "courses": [
             {
                 "name": "B.A.",

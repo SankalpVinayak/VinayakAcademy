@@ -4,7 +4,7 @@ import rawCourseData from '../data/Courses.json'; // assuming correct path
 
 // Combine all course categories into one flat array
 const courseList = [
-    ...rawCourseData.schooling,
+    ...rawCourseData.foundation,
     ...rawCourseData.undergraduate,
     ...rawCourseData.postgraduate,
     ...rawCourseData.diploma,
@@ -108,12 +108,12 @@ const UniversityComparison = () => {
 
             {/* Comparison Section */}
             {showComparison && selectedUnis.length > 0 ? (
-                <div className="flex flex-col items-center space-y-6 lg:flex-row lg:space-y-0 lg:space-x-6 justify-center">
+                <div className="flex flex-col items-stretch space-y-6 lg:flex-row lg:space-y-0 lg:space-x-6 justify-center">
                     {selectedUnis.map((uniData) => (
                         <div
                             key={uniData.id}
-                            className="bg-white/60 backdrop-blur-md border border-purple-100 rounded-3xl shadow-xl w-full max-w-sm p-6 
-                            transition-transform hover:scale-105 flex flex-col gap-4">
+                            className="bg-white/60 backdrop-blur-md border border-purple-100 rounded-3xl 
+                            shadow-xl w-full max-w-sm p-6 transition-transform hover:scale-105 flex flex-col gap-4">
 
                             <div className="flex flex-col items-center space-y-4">
                                 <div className="h-12 w-12 rounded-full border border-purple-300 overflow-hidden flex-shrink-0 bg-white shadow-sm">
@@ -131,26 +131,31 @@ const UniversityComparison = () => {
                                 </div>
 
 
-                                <div className="flex justify-between gap-2 items-center">
-                                    <span className="font-semibold text-gray-700">🏛️ UGC:</span>
-                                    <span
-                                        className={`text-xs font-medium px-3 py-1 rounded-full shadow-sm ${uniData.UGC === 'Approved'
-                                            ? 'bg-gradient-to-r from-green-100 to-green-200 text-green-800'
-                                            : 'bg-red-100 text-red-700'
-                                            }`}
-                                    >
-                                        {uniData.UGC}
-                                    </span>
-                                </div>
+                                {uniData.name !== 'Board of Open Schooling and Skill Education' &&
+                                    (<div className="flex justify-between gap-2 items-center">
+                                        <span className="font-semibold text-gray-700">🏛️ UGC:</span>
+                                        <span
+                                            className={`text-xs font-medium px-3 py-1 rounded-full shadow-sm ${uniData.UGC === 'Approved'
+                                                ? 'bg-gradient-to-r from-green-100 to-green-200 text-green-800'
+                                                : 'bg-red-100 text-red-700'
+                                                }`}
+                                        >
+                                            {uniData.UGC}
+                                        </span>
+                                    </div>
+                                    )}
 
                                 {/* NAAC Grade */}
-                                <div className="flex justify-between gap-2 items-center">
-                                    <span className="font-semibold text-gray-700">🏅 NAAC Grade: </span>
-                                    <span className="text-xs font-medium px-3 py-1 rounded-full shadow-sm bg-gradient-to-r from-yellow-100 to-yellow-200 text-yellow-800">
-                                        {uniData.NAAC}
-                                    </span>
-                                </div>
+                                {uniData.name !== 'Board of Open Schooling and Skill Education' &&
+                                    (<div className="flex justify-between gap-2 items-center">
+                                        <span className="font-semibold text-gray-700">🏅 NAAC Grade: </span>
+                                        <span className="text-xs font-medium px-3 py-1 rounded-full shadow-sm bg-gradient-to-r from-yellow-100 to-yellow-200 text-yellow-800">
+                                            {uniData.NAAC}
+                                        </span>
+                                    </div>
+                                    )}
                             </div>
+
 
                             {/* Courses Offered Section — no overflow or max-height */}
                             <div className="bg-white/50 p-3 rounded-xl border border-purple-200">

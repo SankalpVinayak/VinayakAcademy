@@ -28,20 +28,21 @@ const Universities = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1 }}
                         className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-shadow 
-                        duration-300 border border-purple-100 overflow-hidden group h-[440px] flex flex-col"
+                        duration-300 border border-purple-100 overflow-hidden group h-[500px] flex flex-col"
                     >
                         {/* Image Section */}
                         <div className="h-56 overflow-hidden">
                             <img
                                 src={uni.image}
                                 alt={uni.name}
+                                loading='lazy'
                                 className="w-full h-full object-cover transform group-hover:scale-105 
                                 transition-transform duration-300"
                             />
                         </div>
 
                         {/* Content Section */}
-                        <div className="flex flex-col justify-between flex-1 p-6">
+                        <div className="flex flex-col flex-grow justify-between p-4">
                             <div className="space-y-2">
                                 <h3 className="text-xl lg:text-2xl font-bold text-purple-800 flex 
                                 items-center gap-2 line-clamp-2 leading-snug md:h-18 xl:h-16">
@@ -52,25 +53,30 @@ const Universities = () => {
                                     <span className="line-clamp-1 font-semibold">{uni.location}</span>
                                 </div>
 
-                                <div className="flex items-center gap-2 text-gray-600 min-h-[1.5rem]">
-                                    🏛️ <span className="font-lg font-bold text-purple-700">UGC:</span>
-                                    <span
-                                        className={`px-3 py-1 rounded-full text-sm font-semibold ${uni.UGC === 'Approved'
-                                            ? 'bg-green-100 text-green-700'
-                                            : 'bg-red-100 text-red-700'
-                                            }`}
-                                    >
-                                        {uni.UGC}
-                                    </span>
-                                </div>
+                                {/*UGC*/}
+                                {uni.name !== 'Board of Open Schooling and Skill Education' && (
+                                    <div className="flex items-center gap-2 text-gray-600 min-h-[1.5rem]">
+                                        🏛️ <span className="font-lg font-bold text-purple-700">UGC:</span>
+                                        <span
+                                            className={`px-3 py-1 rounded-full text-sm font-semibold ${uni.UGC === 'Approved'
+                                                ? 'bg-green-100 text-green-700'
+                                                : 'bg-red-100 text-red-700'
+                                                }`}
+                                        >
+                                            {uni.UGC}
+                                        </span>
+                                    </div>
+                                )}
 
                                 {/* NAAC Grade */}
-                                <div className="flex items-center gap-2 text-gray-600 min-h-[1.5rem]">
-                                    🏅 <span className="font-lg font-bold text-purple-700">NAAC Grade:</span>
-                                    <span className="px-3 py-1 rounded-full text-sm font-semibold bg-yellow-100 text-yellow-800">
-                                        {uni.NAAC}
-                                    </span>
-                                </div>
+                                {uni.name !== 'Board of Open Schooling and Skill Education' && (
+                                    <div className="flex items-center gap-2 text-gray-600 min-h-[1.5rem]">
+                                        🏅 <span className="font-lg font-bold text-purple-700">NAAC Grade:</span>
+                                        <span className="px-3 py-1 rounded-full text-sm font-semibold bg-yellow-100 text-yellow-800">
+                                            {uni.NAAC}
+                                        </span>
+                                    </div>
+                                )}
 
                                 {/* <div className="flex items-center gap-2 text-gray-600 min-h-[1.5rem]">
                                     💰 <span className="font-medium text-purple-700">Fee:</span>

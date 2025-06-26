@@ -184,7 +184,7 @@
         "name": "Swami Vivekanand Subharti University",
         "fee": "Rs.60000",
         "location": "Meerut",
-        "logoImage": "/images/universities/SVSULogo.png",
+        "logoImage": "/images/universities/SVSULogo.jpeg",
         "UGC": "Approved",
         "NAAC": "A",
         "courses": [
@@ -414,7 +414,7 @@
                 "name": "Diploma",
                 "fee": "Rs. 1,26,000",
                 "subject": "Enginnering / Automobile Engineering / Chemical Engineering / Civil Engineering / Computer Science Engineering / Electrical Engineering / Electrical and Electronics Engineering / Electronics and Communication Engineering / Information Technology Engineering / Instrumentation Engineering / Mechanical Engineering / Biotechnology / Bioinformatics / Biochemistry",
-                "duration": 3
+                "duration": 2
             },
             {
                 "name": "L.L.B.",
@@ -511,7 +511,7 @@
     },
     {
         "id": 12,
-        "name": "Loverly Professional University",
+        "name": "Lovely Professional University",
         "fee": "Rs.60000",
         "location": "Phagwara, Punjab",
         "logoImage": "/images/universities/LPULogo.png",
